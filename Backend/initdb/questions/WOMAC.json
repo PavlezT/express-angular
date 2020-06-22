@@ -1,0 +1,219 @@
+{
+   "name":"WOMAC",
+   "label":"Knee (WOMAC)",
+   "locale": "us-us",
+   "desc":"",
+   "instructions":"",
+   "sections":[
+      {
+         "name":"Section A",
+         "instructions":"Think about the pain you felt during the last month caused by the arthritis.",
+         "sectionitems":[
+            {
+               "id":1,
+               "showid":"yes",
+               "q":"When walking on a flat surface?",
+               "a":{
+                  "atype":"vas"
+               }
+            },
+            {
+               "id":2,
+               "showid":"yes",
+               "q":"When going up or down stairs?",
+               "a":{
+                  "atype":"vas"
+               }
+            },
+            {
+               "id":3,
+               "showid":"yes",
+               "q":"At night while in bed? (that is – pain that disturb your sleep)",
+               "a":{
+                  "atype":"vas"
+               }
+            },
+            {
+               "id":4,
+               "showid":"yes",
+               "q":"While sitting or lying down?",
+               "a":{
+                  "atype":"vas"
+               }
+            },
+            {
+               "id":5,
+               "showid":"yes",
+               "q":"While standing?",
+               "a":{
+                  "atype":"vas"
+               }
+            }
+         ]
+      },
+      {
+         "name":"Section B",
+         "instructions":"Think about the stiffness (not pain) you felt during the last month caused by the arthritis. Stiffness is a sensation of decreased ease in moving your joint.",
+         "sectionitems":[
+            {
+               "id":6,
+               "showid":"yes",
+               "q":"How severe has your stiffness been after you first wake up in the morning?",
+               "a":{
+                  "atype":"vas"
+               }
+            },
+            {
+               "id":7,
+               "showid":"yes",
+               "q":"How severe has your stiffness been after sitting or lying down or while resting later in the day?",
+               "a":{
+                  "atype":"vas"
+               }
+            }
+         ]
+      },
+      {
+         "name":"Section C",
+         "instructions":"Think about the difficulty you had in doing the following daily physical activities during the last month caused by the arthritis. By this we mean your ability to move around and take care of yourself.",
+         "sectionitems":[
+            {
+               "id":8,
+               "showid":"yes",
+               "q":"When going down the stairs?",
+               "a":{
+                  "atype":"vas"
+               }
+            },
+            {
+               "id":9,
+               "showid":"yes",
+               "q":"When going up the stairs?",
+               "a":{
+                  "atype":"vas"
+               }
+            },
+            {
+               "id":10,
+               "showid":"yes",
+               "q":"When getting up from a sitting position?",
+               "a":{
+                  "atype":"vas"
+               }
+            },
+            {
+               "id":11,
+               "showid":"yes",
+               "q":"While standing?",
+               "a":{
+                  "atype":"vas"
+               }
+            },
+            {
+               "id":12,
+               "showid":"yes",
+               "q":"When bending to the floor?",
+               "a":{
+                  "atype":"vas"
+               }
+            },
+            {
+               "id":13,
+               "showid":"yes",
+               "q":"When walking on a flat surface?",
+               "a":{
+                  "atype":"vas"
+               }
+            },
+            {
+               "id":14,
+               "showid":"yes",
+               "q":"Getting in or out of a car, or getting on or off a bus?",
+               "a":{
+                  "atype":"vas"
+               }
+            },
+            {
+               "id":15,
+               "showid":"yes",
+               "q":"While going shopping?",
+               "a":{
+                  "atype":"vas"
+               }
+            },
+            {
+               "id":16,
+               "showid":"yes",
+               "q":"When putting on your socks or panty hose or stockings?",
+               "a":{
+                  "atype":"vas"
+               }
+            },
+            {
+               "id":17,
+               "showid":"yes",
+               "q":"When getting out of bed?",
+               "a":{
+                  "atype":"vas"
+               }
+            },
+            {
+               "id":18,
+               "showid":"yes",
+               "q":"When taking off your socks or panty hose or stockings?",
+               "a":{
+                  "atype":"vas"
+               }
+            },
+            {
+               "id":19,
+               "showid":"yes",
+               "q":"While lying in bed?",
+               "a":{
+                  "atype":"vas"
+               }
+            },
+            {
+               "id":20,
+               "showid":"yes",
+               "q":"When getting in or out the bathtub?",
+               "a":{
+                  "atype":"vas"
+               }
+            },
+            {
+               "id":21,
+               "showid":"yes",
+               "q":"While sitting?",
+               "a":{
+                  "atype":"vas"
+               }
+            },
+            {
+               "id":22,
+               "showid":"yes",
+               "q":"When getting on or off the toilet?",
+               "a":{
+                  "atype":"vas"
+               }
+            },
+            {
+               "id":23,
+               "showid":"yes",
+               "q":"When doing heavy household chores?",
+               "a":{
+                  "atype":"vas"
+               }
+            },
+            {
+               "id":24,
+               "showid":"yes",
+               "q":"When doing light household chores?",
+               "a":{
+                  "atype":"vas"
+               }
+            }
+         ]
+      }
+   ]
+}

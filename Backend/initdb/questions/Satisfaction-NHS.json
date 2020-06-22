@@ -1,0 +1,165 @@
+{
+   "name":"Satisfaction-NHS",
+   "label":"Patient satisfaction (NHS)",
+   "locale": "us-us",
+   "desc":"",
+   "instructions":"",
+   "sections":[
+      {
+         "name":"",
+         "instructions":"",
+         "sectionitems":[
+            {
+               "id":1,
+               "showid":"yes",
+               "q":"How satisfied are you with how long you had to wait for an appointment?",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"Extremely satisfied"
+                     },
+                     {
+                        "id":2,
+                        "text":"Very satisfied"
+                     },
+                     {
+                        "id":3,
+                        "text":"Satisfied"
+                     },
+                     {
+                        "id":4,
+                        "text":"Unsatisfied"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":2,
+               "showid":"yes",
+               "q":"How would you rate the courtesy of the physiotherapist during your appointments?",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"Excellent"
+                     },
+                     {
+                        "id":2,
+                        "text":"Very good"
+                     },
+                     {
+                        "id":3,
+                        "text":"Good"
+                     },
+                     {
+                        "id":4,
+                        "text":"Fair"
+                     },
+                     {
+                        "id":3,
+                        "text":"Poor"
+                     },
+                     {
+                        "id":4,
+                        "text":"Very poor"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":3,
+               "showid":"yes",
+               "q":"How long after your stated appointment time did the appointment start?",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"Seen on time/early"
+                     },
+                     {
+                        "id":2,
+                        "text":"5 Min. wait"
+                     },
+                     {
+                        "id":3,
+                        "text":"6-15 Min. wait"
+                     },
+                     {
+                        "id":4,
+                        "text":"16-30 Min. wait"
+                     },
+                     {
+                        "id":3,
+                        "text":"31-60 Min. wait"
+                     },
+                     {
+                        "id":4,
+                        "text":">1h<2h"
+                     },
+                     {
+                        "id":4,
+                        "text":"Don't know"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":4,
+               "showid":"yes",
+               "q":"Did the physiotherapist explain the reasons for any treatment or action in a way that you could understand?",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"Yes - completely"
+                     },
+                     {
+                        "id":2,
+                        "text":"Yes - to some extent"
+                     },
+                     {
+                        "id":3,
+                        "text":"No"
+                     },
+                     {
+                        "id":4,
+                        "text":"I did not need an explanation"
+                     },
+                     {
+                        "id":3,
+                        "text":"No treatment or action was needed"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":5,
+               "showid":"yes",
+               "q":"Did the physiotherapist tell you who/how to contact if you needed to speak to anyone about your condition or treatment after you left the clinic?",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"Yes"
+                     },
+                     {
+                        "id":2,
+                        "text":"No"
+                     },
+                     {
+                        "id":3,
+                        "text":"Don't know"
+                     }
+                  ]
+               }
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,27 @@
+<nb-card>
+    <nb-card-header>
+        <div class="container">
+            <div class="row">
+                <div class="col-auto mr-auto justify-content-start">
+                    <span>Clinics</span>
+                </div>
+                <div class="col-auto justify-content-end">
+                    <span>Please, select the territory</span>
+                </div>
+                <div class="col-md-3 col-lg-3 col-xxxl-3 justify-content-end">
+                    <nb-select (ngModelChange)="onChange($event)" [(ngModel)]="territoryId"
+                        placeholder="Select territory" outline status="success">
+                        <nb-option [value]="territory.id" *ngFor="let territory of territories$ | async">
+                            {{territory.name}}
+                        </nb-option>
+                    </nb-select>
+                </div>
+            </div>
+        </div>
+    </nb-card-header>
+    <nb-list>
+        <nb-list-item *ngFor="let clinic of clinics$ | async">
+            <ngx-clinic [clinic]="clinic"></ngx-clinic>
+        </nb-list-item>
+    </nb-list>
+</nb-card>

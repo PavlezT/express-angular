@@ -1,0 +1,2768 @@
+{
+  "host": "localhost:3000",
+  "info": {
+    "title": "CTS back office",
+    "version": "0.0.0",
+    "description": "[Specification JSON](/api-spec)"
+  },
+  "paths": {
+    "/api/questions": {
+      "get": {
+        "tags": [
+          "Questions"
+        ],
+        "summary": "/api/questions",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "locale": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  },
+                  "id": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "304": {},
+          "403": {
+            "schema": {
+              "type": "string",
+              "example": "Forbidden"
+            }
+          }
+        },
+        "produces": [
+          "text/plain",
+          "application/json"
+        ]
+      },
+      "post": {
+        "tags": [
+          "Questions"
+        ],
+        "summary": "/api/questions",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "locale": {
+                  "type": "string",
+                  "example": "us-us"
+                },
+                "name": {
+                  "type": "string",
+                  "example": "WOMAC"
+                }
+              }
+            }
+          }
+        ],
+        "produces": [
+          "text/plain",
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sections": {
+                  "type": "array",
+                  "items": {},
+                  "example": []
+                },
+                "locale": {
+                  "type": "string",
+                  "example": "en-gb"
+                },
+                "name": {
+                  "type": "string",
+                  "example": "WOMAC"
+                },
+                "createdAt": {
+                  "type": "string",
+                  "example": "2019-09-20T17:17:30.948Z"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "example": "2019-09-20T17:17:30.948Z"
+                },
+                "id": {
+                  "type": "string",
+                  "example": "5d8509aa936281b936e38e1d"
+                }
+              }
+            }
+          },
+          "403": {
+            "schema": {
+              "type": "string",
+              "example": "Forbidden"
+            }
+          }
+        }
+      }
+    },
+    "/api/questions/{id}": {
+      "get": {
+        "tags": [
+          "Questions"
+        ],
+        "summary": "/api/questions/{id}",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "example": "5d8506c763fe62b8c3bffcf3"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sections": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "name": {
+                  "type": "string",
+                  "example": "WOMAC"
+                },
+                "label": {
+                  "type": "string",
+                  "example": "Knee (WOMAC)"
+                },
+                "locale": {
+                  "type": "string",
+                  "example": "us-us"
+                }
+              }
+            }
+          },
+          "304": {}
+        },
+        "produces": [
+          "application/json"
+        ]
+      },
+      "put": {
+        "tags": [
+          "Questions"
+        ],
+        "summary": "/api/questions/{id}",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "example": "5d8509aa936281b936e38e1d"
+          },
+          {
+            "in": "formData",
+            "name": "question",
+            "required": true,
+            "type": "file"
+          }
+        ],
+        "responses": {
+          "200": {}
+        }
+      },
+      "delete": {
+        "tags": [
+          "Questions"
+        ],
+        "summary": "/api/questions/{id}",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/api/mobile/languages": {
+      "get": {
+        "tags": [
+          "Language"
+        ],
+        "summary": "/api/mobile/languages",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "locale": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "id": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "304": {}
+        }
+      },
+      "post": {
+        "tags": [
+          "Language"
+        ],
+        "summary": "/api/mobile/languages",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "locale": {
+                  "type": "string",
+                  "example": "us-us"
+                },
+                "name": {
+                  "type": "string",
+                  "example": "English"
+                }
+              }
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "locale": {
+                  "type": "string",
+                  "example": "us-us"
+                },
+                "name": {
+                  "type": "string",
+                  "example": "English"
+                },
+                "createdAt": {
+                  "type": "string",
+                  "example": "2019-07-22T12:45:00.833Z"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "example": "2019-07-22T12:45:00.833Z"
+                },
+                "id": {
+                  "type": "string",
+                  "example": "5d35afcc8e150a5d241d1dd7"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/mobile/languages/{locale}": {
+      "get": {
+        "tags": [
+          "Language"
+        ],
+        "summary": "/api/mobile/languages/{locale}",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "locale",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "example": "us-us"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "locale": {
+                  "type": "string",
+                  "example": "us-us"
+                },
+                "name": {
+                  "type": "string",
+                  "example": "English"
+                },
+                "createdAt": {
+                  "type": "string",
+                  "example": "2019-07-22T12:45:00.833Z"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "example": "2019-07-22T12:45:00.833Z"
+                },
+                "id": {
+                  "type": "string",
+                  "example": "5d35afcc8e150a5d241d1dd7"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Language"
+        ],
+        "summary": "/api/mobile/languages/{locale}",
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "name": "locale",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "example": "ru-ru"
+          },
+          {
+            "in": "formData",
+            "name": "language",
+            "required": true,
+            "type": "file"
+          }
+        ],
+        "responses": {
+          "200": {}
+        }
+      },
+      "delete": {
+        "tags": [
+          "Language"
+        ],
+        "summary": "/api/mobile/languages/{locale}",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "locale",
+            "in": "path",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/api/languages": {
+      "get": {
+        "tags": [
+          "Language"
+        ],
+        "summary": "/api/languages",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "locale": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "id": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "304": {},
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "security": [
+          {
+            "authorization": []
+          }
+        ],
+        "produces": [
+          "application/json"
+        ]
+      },
+      "post": {
+        "tags": [
+          "Language"
+        ],
+        "summary": "/api/languages",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "locale": {
+                  "type": "string",
+                  "example": "ru-ru"
+                },
+                "name": {
+                  "type": "string",
+                  "example": "Русский"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "locale": {
+                  "type": "string",
+                  "example": "ru-ru"
+                },
+                "name": {
+                  "type": "string",
+                  "example": "Русский"
+                },
+                "createdAt": {
+                  "type": "string",
+                  "example": "2019-06-06T12:41:45.795Z"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "example": "2019-06-06T12:41:45.795Z"
+                },
+                "id": {
+                  "type": "string",
+                  "example": "5cf90a09fa16ee6b3a58fc20"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "security": [
+          {
+            "authorization": []
+          }
+        ],
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/api/languages/{locale}": {
+      "get": {
+        "tags": [
+          "Language"
+        ],
+        "summary": "/api/languages/{locale}",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "locale",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "example": "ru-ru"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "locale": {
+                  "type": "string",
+                  "example": "ru-ru"
+                },
+                "name": {
+                  "type": "string",
+                  "example": "Русский"
+                },
+                "body": {
+                  "type": "object",
+                  "properties": {
+                    "Header": {
+                      "type": "object",
+                      "properties": {
+                        "title": {
+                          "type": "string",
+                          "example": "Заглавие"
+                        }
+                      }
+                    },
+                    "DashBoard": {
+                      "type": "object",
+                      "properties": {
+                        "title": {
+                          "type": "string",
+                          "example": "Панель"
+                        }
+                      }
+                    }
+                  }
+                },
+                "createdAt": {
+                  "type": "string",
+                  "example": "2019-06-06T12:40:43.378Z"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "example": "2019-06-06T12:40:43.378Z"
+                },
+                "id": {
+                  "type": "string",
+                  "example": "5cf909cb6c017d6b0d0adca0"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "security": [
+          {
+            "authorization": []
+          }
+        ],
+        "produces": [
+          "application/json"
+        ]
+      },
+      "put": {
+        "tags": [
+          "Language"
+        ],
+        "summary": "/api/languages/{locale}",
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "name": "locale",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "example": "ru-ru"
+          },
+          {
+            "in": "formData",
+            "name": "language",
+            "required": true,
+            "type": "file"
+          }
+        ],
+        "responses": {
+          "200": {},
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "security": [
+          {
+            "authorization": []
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "Language"
+        ],
+        "summary": "/api/languages/{locale}",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "locale",
+            "in": "path",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/api/settings/pathologies/{area}": {
+      "get": {
+        "tags": [
+          "Settings"
+        ],
+        "summary": "/api/settings/pathologies/{area}",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "area",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "example": "Knee"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "effects": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "example": [
+                    "Left",
+                    "Right",
+                    "Bilateral"
+                  ]
+                },
+                "area": {
+                  "type": "string",
+                  "example": "Knee"
+                },
+                "text": {
+                  "type": "string",
+                  "example": "Knee OA"
+                },
+                "side": {
+                  "type": "boolean",
+                  "example": true
+                },
+                "createdAt": {
+                  "type": "string",
+                  "example": "2019-05-28T10:11:03.190Z"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "example": "2019-05-28T10:15:07.126Z"
+                },
+                "id": {
+                  "type": "string",
+                  "example": "5ced0937cf3e797c4a054d80"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/settings/pathologies/{id}": {
+      "put": {
+        "tags": [
+          "Settings"
+        ],
+        "summary": "/api/settings/pathologies/{id}",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "example": "5ced0a3e8da05f7deb02c123"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "area": {
+                  "type": "string",
+                  "example": "Knee"
+                },
+                "text": {
+                  "type": "string",
+                  "example": "Knee OA"
+                },
+                "side": {
+                  "type": "boolean",
+                  "example": true
+                }
+              }
+            }
+          }
+        ],
+        "produces": [
+          "text/plain"
+        ],
+        "responses": {
+          "200": {},
+          "403": {
+            "schema": {
+              "type": "string",
+              "example": "Forbidden"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Settings"
+        ],
+        "summary": "/api/settings/pathologies/{id}",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "example": "5ced0a3e8da05f7deb02c123"
+          }
+        ],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/api/settings/pathologies/": {
+      "post": {
+        "tags": [
+          "Settings"
+        ],
+        "summary": "/api/settings/pathologies/",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "area": {
+                  "type": "string",
+                  "example": "Knee"
+                },
+                "text": {
+                  "type": "string",
+                  "example": "Knee OA"
+                },
+                "side": {
+                  "type": "boolean",
+                  "example": true
+                }
+              }
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "effects": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "example": [
+                    "Left",
+                    "Right",
+                    "Bilateral"
+                  ]
+                },
+                "area": {
+                  "type": "string",
+                  "example": "Knee"
+                },
+                "text": {
+                  "type": "string",
+                  "example": "Knee OA"
+                },
+                "side": {
+                  "type": "boolean",
+                  "example": true
+                },
+                "createdAt": {
+                  "type": "string",
+                  "example": "2019-05-29T07:43:56.906Z"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "example": "2019-05-29T07:43:56.906Z"
+                },
+                "id": {
+                  "type": "string",
+                  "example": "5cee383c259ba05d58400c04"
+                }
+              }
+            }
+          },
+          "400": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "errors": {
+                  "type": "object",
+                  "properties": {
+                    "text": {
+                      "type": "object",
+                      "properties": {
+                        "message": {
+                          "type": "string",
+                          "example": "Path `text` is required."
+                        },
+                        "name": {
+                          "type": "string",
+                          "example": "ValidatorError"
+                        },
+                        "properties": {
+                          "type": "object",
+                          "properties": {
+                            "message": {
+                              "type": "string",
+                              "example": "Path `text` is required."
+                            },
+                            "type": {
+                              "type": "string",
+                              "example": "required"
+                            },
+                            "path": {
+                              "type": "string",
+                              "example": "text"
+                            }
+                          }
+                        },
+                        "kind": {
+                          "type": "string",
+                          "example": "required"
+                        },
+                        "path": {
+                          "type": "string",
+                          "example": "text"
+                        }
+                      }
+                    }
+                  }
+                },
+                "_message": {
+                  "type": "string",
+                  "example": "Pathologies validation failed"
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Pathologies validation failed: text: Path `text` is required."
+                },
+                "name": {
+                  "type": "string",
+                  "example": "ValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/settings/marketingitems/all": {
+      "get": {
+        "tags": [
+          "Settings"
+        ],
+        "summary": "/api/settings/marketingitems/all",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "text": {
+                    "type": "string"
+                  },
+                  "count": {
+                    "type": "number"
+                  },
+                  "createdAt": {
+                    "type": "string"
+                  },
+                  "updatedAt": {
+                    "type": "string"
+                  },
+                  "id": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/settings/marketingitems/{id}": {
+      "get": {
+        "tags": [
+          "Settings"
+        ],
+        "summary": "/api/settings/marketingitems/{id}",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "example": "5ced0b4078faa27eb31e864c"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "example": "Some stuff"
+                },
+                "count": {
+                  "type": "number",
+                  "example": 70111
+                },
+                "createdAt": {
+                  "type": "string",
+                  "example": "2019-05-28T10:19:44.191Z"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "example": "2019-05-28T10:19:44.191Z"
+                },
+                "id": {
+                  "type": "string",
+                  "example": "5ced0b4078faa27eb31e864c"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Settings"
+        ],
+        "summary": "/api/settings/marketingitems/{id}",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "example": "5ced0b6778faa27eb31e864e"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "example": "Some stuff2"
+                },
+                "count": {
+                  "type": "number",
+                  "example": 70111
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {}
+        }
+      },
+      "delete": {
+        "tags": [
+          "Settings"
+        ],
+        "summary": "/api/settings/marketingitems/{id}",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "example": "5ced0b4078faa27eb31e864c"
+          }
+        ],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/api/settings/marketingitems/": {
+      "post": {
+        "tags": [
+          "Settings"
+        ],
+        "summary": "/api/settings/marketingitems/",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "example": "Some stuff"
+                },
+                "count": {
+                  "type": "number",
+                  "example": 70111
+                }
+              }
+            }
+          }
+        ],
+        "produces": [
+          "text/plain",
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "example": "Some stuff"
+                },
+                "count": {
+                  "type": "number",
+                  "example": 70111
+                },
+                "createdAt": {
+                  "type": "string",
+                  "example": "2019-05-28T10:19:44.191Z"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "example": "2019-05-28T10:19:44.191Z"
+                },
+                "id": {
+                  "type": "string",
+                  "example": "5ced0b4078faa27eb31e864c"
+                }
+              }
+            }
+          },
+          "403": {
+            "schema": {
+              "type": "string",
+              "example": "Forbidden"
+            }
+          }
+        }
+      }
+    },
+    "/api/settings/surgery/all": {
+      "get": {
+        "tags": [
+          "Settings"
+        ],
+        "summary": "/api/settings/surgery/all",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "text": {
+                    "type": "string"
+                  },
+                  "createdAt": {
+                    "type": "string"
+                  },
+                  "updatedAt": {
+                    "type": "string"
+                  },
+                  "id": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/settings/surgery/{id}": {
+      "get": {
+        "tags": [
+          "Settings"
+        ],
+        "summary": "/api/settings/surgery/{id}",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "example": "5ced0d791a2c6e04a021c99b"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "example": "cut them fingers! they are bad specification writers"
+                },
+                "createdAt": {
+                  "type": "string",
+                  "example": "2019-05-28T10:29:13.846Z"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "example": "2019-05-28T10:29:13.846Z"
+                },
+                "id": {
+                  "type": "string",
+                  "example": "5ced0d791a2c6e04a021c99b"
+                }
+              }
+            }
+          },
+          "404": {}
+        }
+      },
+      "put": {
+        "tags": [
+          "Settings"
+        ],
+        "summary": "/api/settings/surgery/{id}",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "example": "5ced0d791a2c6e04a021c99b"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "example": "cut them fingers! they are bad specification writers (it is a joke)"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {}
+        }
+      },
+      "delete": {
+        "tags": [
+          "Settings"
+        ],
+        "summary": "/api/settings/surgery/{id}",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "example": "5ced0d791a2c6e04a021c99b"
+          }
+        ],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/api/settings/surgery/": {
+      "post": {
+        "tags": [
+          "Settings"
+        ],
+        "summary": "/api/settings/surgery/",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "example": "cut them fingers! they are bad specification writers"
+                }
+              }
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "example": "cut them fingers! they are bad specification writers"
+                },
+                "createdAt": {
+                  "type": "string",
+                  "example": "2019-05-28T10:29:13.846Z"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "example": "2019-05-28T10:29:13.846Z"
+                },
+                "id": {
+                  "type": "string",
+                  "example": "5ced0d791a2c6e04a021c99b"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/user/all/{clinic?}": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "/api/user/all/{clinic?}",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "clinic?",
+            "in": "path",
+            "required": false,
+            "type": "string",
+            "example": "5ce7d3808da9483dc17d3097"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "clinics": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "clinic": {
+                          "type": "object",
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "id": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "role": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "id"
+                      ]
+                    }
+                  },
+                  "firstname": {
+                    "type": "string"
+                  },
+                  "lastname": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "type": "string"
+                  },
+                  "id": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/user/{id}": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "/api/user/{id}",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "example": "123123123123-12123-123123"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "clinics": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "id"
+                    ]
+                  },
+                  "example": [
+                    {
+                      "name": "ClinicA",
+                      "id": "5ce7d3808da9483dc17d3097"
+                    },
+                    {
+                      "name": "ClinicAa",
+                      "id": "5ce7f424a91ec4683d327929"
+                    }
+                  ]
+                },
+                "firstname": {
+                  "type": "string"
+                },
+                "lastname": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string",
+                  "example": "ostap.pypkin@email.com"
+                },
+                "createdAt": {
+                  "type": "string",
+                  "example": "2019-05-28T09:15:10.003Z"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "example": "2019-05-28T09:15:35.290Z"
+                },
+                "id": {
+                  "type": "string",
+                  "example": "5cecfc1d9b52616f6f56d28f"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "/api/user/{id}",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "example": "5cecfc1d9b52616f6f56d28f"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstname": {
+                  "type": "string"
+                },
+                "lastname": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string",
+                  "example": "ostap.pypkin@email.com"
+                },
+                "clinics": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "example": [
+                    "5ce7d3808da9483dc17d3097",
+                    "5ce7f424a91ec4683d327929"
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {}
+        }
+      },
+      "delete": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "/api/user/{id}",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "example": "5cecfbc915c1456ef8364e7e"
+          }
+        ],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/api/user": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "/api/user",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstname": {
+                  "type": "string",
+                  "example": "Ostap"
+                },
+                "lastname": {
+                  "type": "string",
+                  "example": "Pypkin"
+                },
+                "status": {
+                  "type": "string",
+                  "example": "pending"
+                },
+                "email": {
+                  "type": "string",
+                  "example": "ostap.pypkin@email.com"
+                },
+                "clinics": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  },
+                  "example": [
+                    {
+                      "role": "atc",
+                      "clinic": "5ce7d3808da9483dc17d3097"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "clinics": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "example": [
+                    "5ce7d3808da9483dc17d3097"
+                  ]
+                },
+                "name": {
+                  "type": "string",
+                  "example": "Ostap Pypkin"
+                },
+                "email": {
+                  "type": "string",
+                  "example": "ostap.pypkin@email.com"
+                },
+                "dateBirth": {
+                  "type": "string",
+                  "example": "2019-05-28T09:09:38.716Z"
+                },
+                "createdAt": {
+                  "type": "string",
+                  "example": "2019-05-28T09:15:10.003Z"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "example": "2019-05-28T09:15:10.003Z"
+                },
+                "id": {
+                  "type": "string",
+                  "example": "5cecfc1d9b52616f6f56d28f"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/clinic/all/{territory?}": {
+      "get": {
+        "tags": [
+          "Clinics"
+        ],
+        "summary": "/api/clinic/all/{territory?}",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "territory?",
+            "in": "path",
+            "required": false,
+            "type": "string",
+            "example": "5ce6a4d3c5dcd95134eb983c"
+          }
+        ],
+        "produces": [
+          "text/plain",
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "territory": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "id": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name",
+                  "territory",
+                  "id"
+                ]
+              }
+            }
+          },
+          "304": {},
+          "400": {},
+          "403": {
+            "schema": {
+              "type": "string",
+              "example": "Forbidden"
+            }
+          }
+        }
+      }
+    },
+    "/api/clinic/{id}": {
+      "get": {
+        "tags": [
+          "Clinics"
+        ],
+        "summary": "/api/clinic/{id}",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "example": "5ce7f2e342ada366ab163641"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "ClinicC"
+                },
+                "country": {
+                  "type": "string",
+                  "example": "Germany"
+                },
+                "city": {
+                  "type": "string",
+                  "example": "Berlin"
+                },
+                "street": {
+                  "type": "string",
+                  "example": "Untermensch strasse"
+                },
+                "latitude": {
+                  "type": "number",
+                  "example": 54.44123
+                },
+                "longitude": {
+                  "type": "number",
+                  "example": 35.11233
+                },
+                "territory": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "example": "Germany"
+                    },
+                    "id": {
+                      "type": "string",
+                      "example": "5ce6a4d3c5dcd95134eb983c"
+                    }
+                  }
+                },
+                "createdAt": {
+                  "type": "string",
+                  "example": "2019-05-24T13:34:27.607Z"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "example": "2019-05-24T13:34:27.607Z"
+                },
+                "id": {
+                  "type": "string",
+                  "example": "5ce7f2e342ada366ab163641"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Clinics"
+        ],
+        "summary": "/api/clinic/{id}",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "example": "all"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "ClinicAb"
+                },
+                "country": {
+                  "type": "string",
+                  "example": "Germany"
+                },
+                "city": {
+                  "type": "string",
+                  "example": "Berlin"
+                },
+                "street": {
+                  "type": "string",
+                  "example": "Untermensch strasse"
+                },
+                "latitude": {
+                  "type": "number",
+                  "example": 54.44123
+                },
+                "longitude": {
+                  "type": "number",
+                  "example": 35.11233
+                },
+                "territory": {
+                  "type": "string",
+                  "example": "5ce6a4d3c5dcd95134eb983c"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {},
+          "400": {}
+        }
+      },
+      "delete": {
+        "tags": [
+          "Clinics"
+        ],
+        "summary": "/api/clinic/{id}",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/api/clinic": {
+      "post": {
+        "tags": [
+          "Clinics"
+        ],
+        "summary": "/api/clinic",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "ClinicAb"
+                },
+                "country": {
+                  "type": "string",
+                  "example": "Germany"
+                },
+                "city": {
+                  "type": "string",
+                  "example": "Berlin"
+                },
+                "street": {
+                  "type": "string",
+                  "example": "Untermensch strasse"
+                },
+                "latitude": {
+                  "type": "number",
+                  "example": 54.44123
+                },
+                "longitude": {
+                  "type": "number",
+                  "example": 35.11233
+                },
+                "territory": {
+                  "type": "string",
+                  "example": "5ce6a4d3c5dcd95134eb983c"
+                }
+              }
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "ClinicAb"
+                },
+                "country": {
+                  "type": "string",
+                  "example": "Germany"
+                },
+                "city": {
+                  "type": "string",
+                  "example": "Berlin"
+                },
+                "street": {
+                  "type": "string",
+                  "example": "Untermensch strasse"
+                },
+                "latitude": {
+                  "type": "number",
+                  "example": 54.44123
+                },
+                "longitude": {
+                  "type": "number",
+                  "example": 35.11233
+                },
+                "territory": {
+                  "type": "string",
+                  "example": "5ce6a4d3c5dcd95134eb983c"
+                },
+                "createdAt": {
+                  "type": "string",
+                  "example": "2019-05-24T14:36:33.696Z"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "example": "2019-05-24T14:36:33.696Z"
+                },
+                "id": {
+                  "type": "string",
+                  "example": "5ce8017177d61f7ad375d897"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/territories": {
+      "get": {
+        "tags": [
+          "Territories"
+        ],
+        "summary": "/api/territories",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [],
+        "produces": [
+          "application/json",
+          "text/plain"
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "name"
+                ]
+              }
+            }
+          },
+          "304": {},
+          "403": {
+            "schema": {
+              "type": "string",
+              "example": "Forbidden"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Territories"
+        ],
+        "summary": "/api/territories",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "Gonduras"
+                },
+                "language": {
+                  "type": "string",
+                  "example": "en-GB"
+                },
+                "unitSystem": {
+                  "type": "string",
+                  "example": "metric"
+                },
+                "referrals": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "example": [
+                    "From friend",
+                    "From newspapper"
+                  ]
+                },
+                "paymentTypes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "example": [
+                    "Cash",
+                    "CreditCard"
+                  ]
+                },
+                "supportedPackages": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "example": [
+                    "Free tier",
+                    "Luxury"
+                  ]
+                },
+                "dropOutReasons": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "example": [
+                    "Dont help",
+                    "Don`t work at all"
+                  ]
+                },
+                "activityStatus": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "__v": {
+                        "type": "number"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "name",
+                      "__v"
+                    ]
+                  },
+                  "example": [
+                    {
+                      "id": "5ce6976c920b7739d19cb4dd",
+                      "name": "Review booked (renamed)",
+                      "__v": 0
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec32",
+                      "name": "Canceled",
+                      "__v": 0
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec33",
+                      "name": "Started treatment",
+                      "__v": 0
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec34",
+                      "name": "Did not attend",
+                      "__v": 0
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec35",
+                      "name": "Did not join (renamed)",
+                      "__v": 0
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec36",
+                      "name": "Unsuitable",
+                      "__v": 0
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec37",
+                      "name": "Stopped treatment",
+                      "__v": 0
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec38",
+                      "name": "Active",
+                      "__v": 0
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec39",
+                      "name": "Self-managing",
+                      "__v": 0
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec3a",
+                      "name": "Stopped treatment (renamed)",
+                      "__v": 0
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec3b",
+                      "name": "Dropped-out (returned device)",
+                      "__v": 0
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec3c",
+                      "name": "Within treatment package",
+                      "__v": 0
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec3d",
+                      "name": "Within maintenance package",
+                      "__v": 0
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec3e",
+                      "name": "New maintenance package",
+                      "__v": 0
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "referrals": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "example": [
+                    "From friend",
+                    "From newspapper"
+                  ]
+                },
+                "paymentTypes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "example": [
+                    "Cash",
+                    "CreditCard"
+                  ]
+                },
+                "supportedPackages": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "example": [
+                    "Free tier",
+                    "Luxury"
+                  ]
+                },
+                "dropOutReasons": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "example": [
+                    "Dont help",
+                    "Don`t work at all"
+                  ]
+                },
+                "id": {
+                  "type": "string",
+                  "example": "5ce69ecc64227b41a6689b01"
+                },
+                "name": {
+                  "type": "string",
+                  "example": "Gonduras"
+                },
+                "language": {
+                  "type": "string",
+                  "example": "en-GB"
+                },
+                "unitSystem": {
+                  "type": "string",
+                  "example": "metric"
+                },
+                "activityStatus": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "name"
+                    ]
+                  },
+                  "example": [
+                    {
+                      "id": "5ce6976c920b7739d19cb4dd",
+                      "name": "Review booked (renamed)"
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec32",
+                      "name": "Canceled"
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec33",
+                      "name": "Started treatment"
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec34",
+                      "name": "Did not attend"
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec35",
+                      "name": "Did not join (renamed)"
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec36",
+                      "name": "Unsuitable"
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec37",
+                      "name": "Stopped treatment"
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec38",
+                      "name": "Active"
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec39",
+                      "name": "Self-managing"
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec3a",
+                      "name": "Stopped treatment (renamed)"
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec3b",
+                      "name": "Dropped-out (returned device)"
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec3c",
+                      "name": "Within treatment package"
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec3d",
+                      "name": "Within maintenance package"
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec3e",
+                      "name": "New maintenance package"
+                    }
+                  ]
+                },
+                "__v": {
+                  "type": "number",
+                  "example": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/territories/{id}": {
+      "get": {
+        "tags": [
+          "Territories"
+        ],
+        "summary": "/api/territories/{id}",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "referrals": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "example": [
+                    "From friend",
+                    "From newspapper"
+                  ]
+                },
+                "paymentTypes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "example": [
+                    "Cash",
+                    "CreditCard"
+                  ]
+                },
+                "supportedPackages": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "example": [
+                    "Free tier",
+                    "Luxury"
+                  ]
+                },
+                "dropOutReasons": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "example": [
+                    "Dont help",
+                    "Don`t work at all"
+                  ]
+                },
+                "id": {
+                  "type": "string",
+                  "example": "5ce69bb400ad0d3e9b2d5b18"
+                },
+                "name": {
+                  "type": "string",
+                  "example": "Great Britain"
+                },
+                "language": {
+                  "type": "string",
+                  "example": "en-GB"
+                },
+                "unitSystem": {
+                  "type": "string",
+                  "example": "imperial"
+                },
+                "activityStatus": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "name"
+                    ]
+                  },
+                  "example": [
+                    {
+                      "id": "5ce6976c920b7739d19cb4dd",
+                      "name": "Review booked (renamed)"
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec32",
+                      "name": "Canceled"
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec33",
+                      "name": "Started treatment"
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec34",
+                      "name": "Did not attend"
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec35",
+                      "name": "Did not join (renamed)"
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec36",
+                      "name": "Unsuitable"
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec37",
+                      "name": "Stopped treatment"
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec38",
+                      "name": "Active"
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec39",
+                      "name": "Self-managing"
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec3a",
+                      "name": "Stopped treatment (renamed)"
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec3b",
+                      "name": "Dropped-out (returned device)"
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec3c",
+                      "name": "Within treatment package"
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec3d",
+                      "name": "Within maintenance package"
+                    },
+                    {
+                      "id": "5ce6994819af913c2bdfec3e",
+                      "name": "New maintenance package"
+                    }
+                  ]
+                },
+                "__v": {
+                  "type": "number",
+                  "example": 0
+                }
+              }
+            }
+          },
+          "304": {},
+          "400": {},
+          "404": {}
+        },
+        "produces": [
+          "application/json"
+        ]
+      },
+      "put": {
+        "tags": [
+          "Territories"
+        ],
+        "summary": "/api/territories/{id}",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "example": "5ce69bb400ad0d3e9b2d5b18"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "Great Britain"
+                },
+                "language": {
+                  "type": "string",
+                  "example": "en-GB"
+                },
+                "unitSystem": {
+                  "type": "string",
+                  "example": "imperial"
+                },
+                "referrals": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "example": [
+                    "From friend",
+                    "From newspapper"
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {}
+        }
+      },
+      "delete": {
+        "tags": [
+          "Territories"
+        ],
+        "summary": "/api/territories/{id}",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/api/activity-status": {
+      "get": {
+        "tags": [
+          "Activity Status"
+        ],
+        "summary": "/api/activity-status",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "__v": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "id",
+                  "name",
+                  "__v"
+                ]
+              }
+            }
+          },
+          "304": {}
+        }
+      }
+    },
+    "/api/auth/login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "summary": "/api/auth/login",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "login": {
+                  "type": "string",
+                  "example": "admin"
+                },
+                "password": {
+                  "type": "string",
+                  "example": "******"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "example": "5ce3d68be7c5c26f33a021cf"
+                },
+                "name": {
+                  "type": "string",
+                  "example": "Admin"
+                },
+                "login": {
+                  "type": "string",
+                  "example": "admin"
+                },
+                "__v": {
+                  "type": "number",
+                  "example": 0
+                },
+                "sessionExpiryDate": {
+                  "type": "string",
+                  "example": "2019-06-06T10:01:47.101Z"
+                }
+              }
+            }
+          },
+          "400": {},
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "produces": [
+          "application/json"
+        ],
+        "security": [
+          {
+            "authorization": []
+          }
+        ]
+      }
+    },
+    "/api/auth/logout": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "summary": "/api/auth/logout",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {}
+        }
+      }
+    }
+  },
+  "schemes": [
+    "http"
+  ],
+  "securityDefinitions": {
+    "authorization": {
+      "name": "authorization",
+      "in": "header",
+      "type": "apiKey"
+    }
+  },
+  "swagger": "2.0"
+}

@@ -1,0 +1,110 @@
+<div class="row">
+    <div class="button-container">
+        <div class="col-md-2">
+            <button nbButton shape="rectangle" status="success" class="btn-demo" (click)="back()">
+                Back
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <nb-card>
+            <nb-card-header>Add User</nb-card-header>
+            <nb-card-body>
+                <form [formGroup]="addUserFormGroup" (submit)="create()">
+                    <div class="form-group row">
+                        <label for="inputEmail" class="col-sm-3 col-form-label">Email</label>
+                        <div class="col-sm-9">
+                            <input
+                                [ngClass]="{'form-control-danger': addUserFormGroup.get('email').invalid && addUserFormGroup.get('email').touched}"
+                                type="email" formControlName="email" class="form-control" id="inputEmail"
+                                placeholder="Email" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputFirstName" class="col-sm-3 col-form-label">First Name</label>
+                        <div class="col-sm-9">
+                            <input
+                                [ngClass]="{'form-control-danger': addUserFormGroup.get('firstName').invalid && addUserFormGroup.get('firstName').touched}"
+                                type="text" formControlName="firstName" class="form-control" id="inputFirstName"
+                                placeholder="First name" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputLastName" class="col-sm-3 col-form-label">Last Name</label>
+                        <div class="col-sm-9">
+                            <input
+                                [ngClass]="{'form-control-danger': addUserFormGroup.get('lastName').invalid && addUserFormGroup.get('lastName').touched}"
+                                type="text" formControlName="lastName" class="form-control" id="inputLastName"
+                                placeholder="Last Name" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputPhoneNumber" class="col-sm-3 col-form-label">Phone Number</label>
+                        <div class="col-sm-9">
+                            <input
+                            [ngClass]="{'form-control-danger': addUserFormGroup.get('phoneNumber').invalid && addUserFormGroup.get('phoneNumber').touched}"
+                            type="text" 
+                            formControlName="phoneNumber" 
+                            class="form-control" 
+                            id="inputPhoneNumber"
+                            placeholder="Phone Number"
+                            mask="+000000000000"
+                            [specialCharacters]="[ '(' ,')', '+', '-' ]"
+                            />
+                                
+                        </div>
+                    </div>
+                    <!-- <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">User status</label>
+                        <div class="col-sm-9">
+                            <select
+                                [ngClass]="{'form-control-danger': addUserFormGroup.get('status').invalid && addUserFormGroup.get('status').touched}"
+                                #select type="text" class="form-control custom-select" placeholder="Choose status"
+                                formControlName="status">
+                                <option *ngFor="let status of statuses" [value]="status.key">{{status.value}}
+                                </option>
+                            </select>
+                        </div>
+                    </div> -->
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Assigned clinics</label>
+                        <div class="col-md-9 col-lg-9 col-xxxl-9">
+                            <nb-card class="list-card" size="small">
+                                <nb-card-header><span> Assigned clinics</span> <button type="button"
+                                        class="assign btn btn-success" (click)="assignClinic()">Assign clinic</button>
+                                </nb-card-header>
+                                <nb-list>
+                                    <nb-list-item *ngFor="let clinic of clinicsAssigned">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h4>Name: {{clinic.clinic.name}}</h4>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <h4>Role: {{clinic.role}}</h4>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <button class="btn btn-warning"
+                                                    (click)="deassignClinic(clinic.clinic.id)">
+                                                    Deassign
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </nb-list-item>
+                                </nb-list>
+                            </nb-card>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-2">
+                            <button type="submit" class="btn btn-success"
+                                [disabled]="isCreateDisabled()">Create</button>
+                        </div>
+                    </div>
+                </form>
+            </nb-card-body>
+        </nb-card>
+    </div>
+</div>

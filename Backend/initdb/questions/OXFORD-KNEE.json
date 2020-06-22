@@ -1,0 +1,375 @@
+{
+   "name":"OXFORD-KNEE",
+   "label":"Oxford knee score",
+   "locale": "us-us",
+   "desc":"",
+   "instructions":"",
+   "sections":[
+      {
+         "name":"",
+         "instructions":"During the past 4 weeks...",
+         "sectionitems":[
+            {
+               "id":1,
+               "showid":"yes",
+               "q":"How would you describe the pain you usually have from your knee?",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                    {
+                        "id":5,
+                        "text":"None"
+                     },
+                     {
+                        "id":4,
+                        "text":"Very mild"
+                     },
+                     {
+                        "id":3,
+                        "text":"Mild"
+                     },
+                     {
+                        "id":2,
+                        "text":"Moderate"
+                     },
+                     {
+                        "id":1,
+                        "text":"Severe"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":2,
+               "showid":"yes",
+               "q":"Have you had any trouble with washing and drying yourself (all over) because of your knee?",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                    {
+                        "id":5,
+                        "text":"No trouble at all"
+                     },
+                     {
+                        "id":4,
+                        "text":"Very little trouble"
+                     },
+                     {
+                        "id":3,
+                        "text":"Moderate trouble"
+                     },
+                     {
+                        "id":2,
+                        "text":"Extreme difficulty"
+                     },
+                     {
+                        "id":1,
+                        "text":"Impossible to do"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":3,
+               "showid":"yes",
+               "q":"Have you had any trouble getting in and out of a car or using public transport because of your knee? (whichever you would tend to use)",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                    {
+                        "id":5,
+                        "text":"No trouble at all"
+                     },
+                     {
+                        "id":4,
+                        "text":"Very little trouble"
+                     },
+                     {
+                        "id":3,
+                        "text":"Moderate trouble"
+                     },
+                     {
+                        "id":2,
+                        "text":"Extreme difficulty"
+                     },
+                     {
+                        "id":1,
+                        "text":"Impossible to do"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":4,
+               "showid":"yes",
+               "q":"For how long have you been able to walk before pain from your knee becomes severe? (with or without a stick)",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                    {
+                        "id":5,
+                        "text":"No pain / More than 30 minutes"
+                     },
+                     {
+                        "id":4,
+                        "text":"16 to 30 minutes"
+                     },
+                     {
+                        "id":3,
+                        "text":"5 to 15 minutes"
+                     },
+                     {
+                        "id":2,
+                        "text":"Around the house only"
+                     },
+                     {
+                        "id":1,
+                        "text":"Not at all - pain severe on walking"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":5,
+               "showid":"yes",
+               "q":"After a meal (sat at a table), how painful has it been for you to stand up from a chair because of your knee?",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                    {
+                        "id":5,
+                        "text":"No pain / More than 30 minutes"
+                     },
+                     {
+                        "id":4,
+                        "text":"16 to 30 minutes"
+                     },
+                     {
+                        "id":3,
+                        "text":"5 to 15 minutes"
+                     },
+                     {
+                        "id":2,
+                        "text":"Around the house only"
+                     },
+                     {
+                        "id":1,
+                        "text":"Not at all - pain severe on walking"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":6,
+               "showid":"yes",
+               "q":"Have you been limping when walking, because of your knee?",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                    {
+                        "id":5,
+                        "text":"Rarely / never"
+                     },
+                     {
+                        "id":4,
+                        "text":"Sometimes, or jast at first"
+                     },
+                     {
+                        "id":3,
+                        "text":"Often, not just at first"
+                     },
+                     {
+                        "id":2,
+                        "text":"Most of the time"
+                     },
+                     {
+                        "id":1,
+                        "text":"All of the time"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":7,
+               "showid":"yes",
+               "q":"Could you kneel down and get up again afterwards?",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                    {
+                        "id":5,
+                        "text":"Yes, Easily"
+                     },
+                     {
+                        "id":4,
+                        "text":"With little difficulty"
+                     },
+                     {
+                        "id":3,
+                        "text":"With moderate difficulty"
+                     },
+                     {
+                        "id":2,
+                        "text":"With extreme difficulty"
+                     },
+                     {
+                        "id":1,
+                        "text":"No, Impossible"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":8,
+               "showid":"yes",
+               "q":"Have you been troubled by pain from your knee in bed at night?",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                    {
+                        "id":5,
+                        "text":"No nights"
+                     },
+                     {
+                        "id":4,
+                        "text":"Only 1 or 2 nights"
+                     },
+                     {
+                        "id":3,
+                        "text":"Some nights"
+                     },
+                     {
+                        "id":2,
+                        "text":"Most nights"
+                     },
+                     {
+                        "id":1,
+                        "text":"Every night"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":9,
+               "showid":"yes",
+               "q":"How much has pain from your knee interfered with your usual work (including housework)?",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                    {
+                        "id":5,
+                        "text":"Not at all"
+                     },
+                     {
+                        "id":4,
+                        "text":"A little bit"
+                     },
+                     {
+                        "id":3,
+                        "text":"Moderately"
+                     },
+                     {
+                        "id":2,
+                        "text":"Greatly"
+                     },
+                     {
+                        "id":1,
+                        "text":"Totally"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":10,
+               "showid":"yes",
+               "q":"Have you felt that your knee might suddenly 'give way' or let you down?",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                    {
+                        "id":5,
+                        "text":"Rarely / never"
+                     },
+                     {
+                        "id":4,
+                        "text":"Sometimes, or jast at first"
+                     },
+                     {
+                        "id":3,
+                        "text":"Often, not just at first"
+                     },
+                     {
+                        "id":2,
+                        "text":"Most of the time"
+                     },
+                     {
+                        "id":1,
+                        "text":"All of the time"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":11,
+               "showid":"yes",
+               "q":"Could you do the household shopping on your own?",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                    {
+                        "id":5,
+                        "text":"Yes, Easily"
+                     },
+                     {
+                        "id":4,
+                        "text":"With little difficulty"
+                     },
+                     {
+                        "id":3,
+                        "text":"With moderate difficulty"
+                     },
+                     {
+                        "id":2,
+                        "text":"With extreme difficulty"
+                     },
+                     {
+                        "id":1,
+                        "text":"No, Impossible"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":12,
+               "showid":"yes",
+               "q":"Could you walk down one flight of stairs?",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                    {
+                        "id":5,
+                        "text":"Yes, Easily"
+                     },
+                     {
+                        "id":4,
+                        "text":"With little difficulty"
+                     },
+                     {
+                        "id":3,
+                        "text":"With moderate difficulty"
+                     },
+                     {
+                        "id":2,
+                        "text":"With extreme difficulty"
+                     },
+                     {
+                        "id":1,
+                        "text":"No, Impossible"
+                     }
+                  ]
+               }
+            }
+         ]
+      }
+   ]
+}

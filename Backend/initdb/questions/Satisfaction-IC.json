@@ -1,0 +1,209 @@
+{
+   "name":"Satisfaction-IC",
+   "label":"Patient satisfaction (first visit)",
+   "locale": "us-us",
+   "desc":"",
+   "instructions":"",
+   "sections":[
+      {
+         "name":"",
+         "instructions":"",
+         "sectionitems":[
+            {
+               "id":1,
+               "showid":"yes",
+               "q":"Ease and convenience of scheduling your AposTherapy appointment.",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"Not Satisfied At All"
+                     },
+                     {
+                        "id":2,
+                        "text":"Not Satisfied"
+                     },
+                     {
+                        "id":3,
+                        "text":"Satisfied a Bit"
+                     },
+                     {
+                        "id":4,
+                        "text":"Satisfied"
+                     },
+                     {
+                        "id":5,
+                        "text":"Very Satisfied"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":2,
+               "showid":"yes",
+               "q":"Explanation of cost and payment options for AposTherapy.",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"Not Satisfied At All"
+                     },
+                     {
+                        "id":2,
+                        "text":"Not Satisfied"
+                     },
+                     {
+                        "id":3,
+                        "text":"Satisfied a Bit"
+                     },
+                     {
+                        "id":4,
+                        "text":"Satisfied"
+                     },
+                     {
+                        "id":5,
+                        "text":"Very Satisfied"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":3,
+               "showid":"yes",
+               "q":"Explanation of why AposTherapy was suggested as a good treatment option for you.",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"Not Satisfied At All"
+                     },
+                     {
+                        "id":2,
+                        "text":"Not Satisfied"
+                     },
+                     {
+                        "id":3,
+                        "text":"Satisfied a Bit"
+                     },
+                     {
+                        "id":4,
+                        "text":"Satisfied"
+                     },
+                     {
+                        "id":5,
+                        "text":"Very Satisfied"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":4,
+               "showid":"yes",
+               "q":"Evaluation and treatment you were given by your Therapist today.",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"Not Satisfied At All"
+                     },
+                     {
+                        "id":2,
+                        "text":"Not Satisfied"
+                     },
+                     {
+                        "id":3,
+                        "text":"Satisfied a Bit"
+                     },
+                     {
+                        "id":4,
+                        "text":"Satisfied"
+                     },
+                     {
+                        "id":5,
+                        "text":"Very Satisfied"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":5,
+               "showid":"yes",
+               "q":"Facility/environment your evaluation was performed in today.",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"Not Satisfied At All"
+                     },
+                     {
+                        "id":2,
+                        "text":"Not Satisfied"
+                     },
+                     {
+                        "id":3,
+                        "text":"Satisfied a Bit"
+                     },
+                     {
+                        "id":4,
+                        "text":"Satisfied"
+                     },
+                     {
+                        "id":5,
+                        "text":"Very Satisfied"
+                     }
+                  ]
+               }
+            }
+         ]
+      },
+      {
+         "name":"",
+         "instructions":"",
+         "sectionitems":[
+            {
+               "id":6,
+               "showid":"yes",
+               "q":"Was your pain or function improved by today's evaluation and treatment?",
+               "a":{
+                  "atype":"yesno"
+               }
+            },
+            {
+               "id":7,
+               "showid":"yes",
+               "q":"Were you glad you came to and experienced today's AposTherapy evaluation?",
+               "a":{
+                  "atype":"yesno"
+               }
+            },
+            {
+               "id":8,
+               "showid":"yes",
+               "q":"Would you refer a friend for AposTherapy treatment?",
+               "a":{
+                  "atype":"yesno"
+               }
+            }
+         ]
+      },
+      {
+         "name":"",
+         "instructions":"",
+         "sectionitems":[
+            {
+               "id":9,
+               "showid":"yes",
+               "q":"Rate your satisfaction with AposTherapy to date (0=terrible, 100=fantastic):",
+               "a":{
+                  "atype":"vas"
+               }
+            }
+         ]
+      }
+   ]
+}

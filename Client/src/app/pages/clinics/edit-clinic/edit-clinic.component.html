@@ -1,0 +1,114 @@
+<div class="row">
+  <div class="button-container">
+    <div class="col-md-2">
+      <button nbButton shape="rectangle" status="success" class="btn-demo" (click)="back()">
+        Back
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="row" *ngIf="state === loadingState.success">
+  <div class="col-md-12">
+    <nb-card>
+      <nb-card-header>Edit Clinic</nb-card-header>
+      <nb-card-body>
+        <div class="form-group row">
+          <label class="col-sm-3 col-form-label">Clinic ID</label>
+          <div class="col-sm-9">
+            <input 
+            type="text"
+            class="form-control"
+            placeholder="Clinic ID"
+            [ngModel]="clinic.id"
+            readonly
+            disabled="true"
+            />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-3 col-form-label">Clinic name</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="inputEmail1" placeholder="Clinic name"
+              [(ngModel)]="clinic.name" />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputEmail1" class="col-sm-3 col-form-label">Country</label>
+          <div class="col-sm-9">
+            <input type="email" class="form-control" id="inputEmail1" placeholder="Country"
+              [(ngModel)]="clinic.country" />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputEmail1" class="col-sm-3 col-form-label">City</label>
+          <div class="col-sm-9">
+            <input type="email" class="form-control" id="inputEmail1" placeholder="City" [(ngModel)]="clinic.city" />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputEmail1" class="col-sm-3 col-form-label">Street</label>
+          <div class="col-sm-9">
+            <input type="email" class="form-control" id="inputEmail1" placeholder="Street"
+              [(ngModel)]="clinic.street" />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputEmail1" class="col-sm-3 col-form-label">GPS Coordinates</label>
+          <div class="col-sm-9" style="margin-bottom: 15px">
+            <input 
+            type="text" 
+            class="form-control" 
+            placeholder="Longitude" 
+            [ngModel]="clinic.latitude"
+            (ngModelChange)="onLatitudeChanged($event)"
+            />
+          </div>
+          <div class="col-sm-9 offset-sm-3">
+            <input 
+            type="text" 
+            class="form-control" 
+            placeholder="Latitude"
+            [ngModel]="clinic.longitude"
+            (ngModelChange)="onLongitudeChanged($event)"  
+             />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-3 col-form-label">Assosiated territory</label>
+          <div class="col-sm-9">
+            <select #select type="text" class="form-control custom-select" [(ngModel)]="clinic.territory.id">
+              <option [value]="territory.id" *ngFor="let territory of territories$ | async">{{ territory.name }}
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-3 col-form-label">Profile</label>
+          <div class="col-sm-9">
+            <select type="text" class="form-control custom-select" [(ngModel)]="clinic.profile">
+              <option [value]="findObjectKeyByValue(profileOption)" *ngFor="let profileOption of profileOptions">{{ profileOption }}
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-2">
+            <button type="submit" class="btn btn-success" (click)="editClinic()">Update</button>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-2">
+            <button type="submit" class="btn btn-danger" (click)="deleteClinic()">Delete</button>
+          </div>
+        </div>
+      </nb-card-body>
+    </nb-card>
+    <nb-card class="map">
+      <nb-card-header>Add Clinic Position</nb-card-header>
+      <nb-card-body>
+        <div leaflet [leafletOptions]="options" [leafletLayers]="layers"></div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>

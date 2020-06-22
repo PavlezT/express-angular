@@ -1,0 +1,111 @@
+{
+   "name":"STEADI",
+   "label":"Balance assessment (STEADI)",
+   "locale": "us-us",
+   "desc":"",
+   "instructions":"",
+   "sections":[
+      {
+         "name":"",
+         "instructions":"Circle “Yes” or “No” for each statement below.",
+         "sectionitems":[
+            {
+               "id":1,
+               "showid":"yes",
+               "q":"I have fallen in the past year.",
+               "a":{
+                  "atype":"yesno"
+               }
+            },
+            {
+               "id":2,
+               "showid":"yes",
+               "q":"I use or have been advised to use a cane or walker to get around safely.",
+               "a":{
+                  "atype":"yesno"
+               }
+            },
+            {
+               "id":3,
+               "showid":"yes",
+               "q":"Sometimes I feel unsteady when I am walking.",
+               "a":{
+                  "atype":"yesno"
+               }
+            },
+            {
+               "id":4,
+               "showid":"yes",
+               "q":"I steady myself by holding onto furniture when walking at home.",
+               "a":{
+                  "atype":"yesno"
+               }
+            },
+            {
+               "id":5,
+               "showid":"yes",
+               "q":"I am worried about falling.",
+               "a":{
+                  "atype":"yesno"
+               }
+            },
+            {
+               "id":6,
+               "showid":"yes",
+               "q":"I need to push with my hands to stand up from a chair.",
+               "a":{
+                  "atype":"yesno"
+               }
+            },
+            {
+               "id":7,
+               "showid":"yes",
+               "q":"I have some trouble stepping up onto a curb.",
+               "a":{
+                  "atype":"yesno"
+               }
+            },
+            {
+               "id":8,
+               "showid":"yes",
+               "q":"I often have to rush to the toilet.",
+               "a":{
+                  "atype":"yesno"
+               }
+            },
+            {
+               "id":9,
+               "showid":"yes",
+               "q":"I have lost some feeling in my feet.",
+               "a":{
+                  "atype":"yesno"
+               }
+            },
+            {
+               "id":10,
+               "showid":"yes",
+               "q":"I take medicine that sometimes makes me feel light-headed or more tired than usual.",
+               "a":{
+                  "atype":"yesno"
+               }
+            },
+            {
+               "id":11,
+               "showid":"yes",
+               "q":"I take medicine to help me sleep or improve my mood.",
+               "a":{
+                  "atype":"yesno"
+               }
+            },
+            {
+               "id":12,
+               "showid":"yes",
+               "q":"I often feel sad or depressed.",
+               "a":{
+                  "atype":"yesno"
+               }
+            }
+         ]
+      }
+   ]
+}

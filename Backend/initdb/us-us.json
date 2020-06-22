@@ -1,0 +1,213 @@
+{
+  "DASHBOARD": {
+      "TITLE": {
+          "TITLE": "Welcome to Apos",
+          "SUB_TITLE": "What would you like to do ?"
+      },
+      "ACTIONS": {
+          "CHECK_IN": "Check in patient",
+          "CANCEL": "Cancel appointment",
+          "CHECK_OUT": "Check out patient",
+          "BROWSE": "Browse patients",
+          "CLINIC_ANALYTICS": "Clinic analytics"
+      }
+  },
+  "HEADER": {
+      "LEFT_MENU": {
+          "APOS_DIRECTORY": "Apos Directory",
+          "CONTACT_APOS_TEAM": "Contact Apos team",
+          "PRINT_PAGE": "Print page",
+          "EXPORT_PAGE": "Export Page"
+      },
+      "RIGHT_MENU": {
+          "PERSONAL_DETAILS": "Personal Details",
+          "SIGN_OUT": "Sign Out",
+          "CHANGE_LANGUAGE": "Change language",
+          "USER_ROLES": {
+              "MANAGER": "Manager",
+              "RECEPTIONIST": "Receptionist",
+              "ATC": "ATC"
+          }
+      }
+  },
+  "NAVBAR": {
+      "CHECK_IN_PATIENT": "Check in Patient",
+      "CANCEL_APPOINTMENT": "Cancel Appointment",
+      "CHECK_OUT_PATIENT": "Check out Patient",
+      "BROWSE_PATIENTS": "Browse Patients",
+      "CLINIC_ANALYTICS": "Clinic Analytics"
+  },
+  "MODALS": {
+      "QR_CODE_MODAL": {
+          "TITLE": "Login to AposQ",
+          "BODY": {
+              "TITLE": "Please scan the QR code below using the",
+              "APP_NAME": "AposQ Tablet App"
+          }
+      },
+      "CHOOSE_LANGUAGE_MODAL": {
+          "TITLE": "Choose language",
+          "BODY": {
+              "CHOOSE_LANGUAGE_PLACEHOLDER": "Choose"
+          }
+      },
+      "LOG_OUT_MODAL": {
+          "TITLE": "Session expired",
+          "BODY": {
+              "TITLE": {
+                  "FIRST_PART": "You will be automatically signed out of the system in",
+                  "TIME": " 60 ",
+                  "LAST_PART": "seconds."
+              },
+              "SUB_TITLE": "What would you like to do?",
+              "BUTTONS": {
+                  "CONTINUE": "continue",
+                  "LOG_OUT": "sign out"
+              }
+          }
+      }
+  },
+  "CHECK_IN": {
+      "TITLE": "Check in patient",
+      "PAGE_CONTENT": {
+          "PATIENT_ID_PLACEHOLDER": "patient ID",
+          "PATIENT_YOB_PLACEHOLDER": "patient year of birth",
+          "CHOOSE_PLACEHOLDER": "Choose",
+          "ID": "ID :",
+          "YEAR_OF_BIRTH": "Year of birth :",
+          "SELECT_AREA": {
+              "PRIMARY_AREA": "What is your primary area of complaint?",
+              "OTHER_AREAS": "Do you experience significant symptoms that impact your daily activities in any of these areas?"
+          },
+          "ERROR_MESSAGE": {
+              "DETAILS": {
+                  "TITLE": "Details do not match.",
+                  "MESSAGE": "Please retry."
+              }
+          },
+          "INFO_MESSAGE": {
+              "NOTE": {
+                  "MESSAGE": "Note: Reassessment required. Patient was found unsuitable."
+              },
+              "NEW_PATIENT": {
+                  "MESSAGE": "New patient is about to be created. Please confirm user details:"
+              },
+              "IC_PATIENT_FOUND": {
+                  "MESSAGE": "Initial consultation (IC) patient found."
+              },
+              "FU_PATIENT_FOUND": {
+                  "MESSAGE": "Follow-up (FU) patient found."
+              }
+          },
+          "BUTTONS": {
+              "OK": "ok",
+              "CONFIRM": "confirm",
+              "BACK": "back",
+              "START_SESSION": "start session"
+          }
+      },
+      "START_SESSION": {
+          "TITLE": "Session started",
+          "PATIENT_ID": "PATIENT ID:",
+          "CONTENT": "Please assist patient with signing in to Apos-Q App"
+      }
+  },
+  "CANCEL": {
+      "TITLE": "Cancel appointment",
+      "PAGE_CONTENT": {
+          "PATIENT_ID_PLACEHOLDER": "patient ID",
+          "CHOOSE_PLACEHOLDER": "Choose",
+          "PATIENT_YOB_PLACEHOLDER": "patient year of birth",
+          "FREE_TEXT_PLACEHOLDER": "(enter free text)",
+          "ID": "ID :",
+          "YEAR_OF_BIRTH": "year of birth :",
+          "SELECT_AREA": {
+              "TITILE": "Please select below",
+              "CANCELLED": "Cancelled",
+              "DID_NOT_ATTEND": "Did not attend"
+          },
+          "ERROR_MESSAGE": {
+              "DETAILS": {
+                  "TITLE": "Details do not match.",
+                  "MESSAGE": "Please retry."
+              },
+              "NOTE": {
+                  "MESSAGE": "Note: Reassessment required. Patient was found unsuitable."
+              }
+          },
+          "INFO_MESSAGE": {
+              "NEW_PATIENT": {
+                  "MESSAGE": "New patient is about to be created. Please confirm user details:"
+              }
+          },
+          "BUTTONS": {
+              "OK": "OK",
+              "CONFIRM": "CONFIRM",
+              "BACK": "BACK",
+              "SUBMIT_AND_CLOSE": "submit & close"
+          }
+      },
+      "CANCELLED": {
+          "TITLE": "Appointment cancelled",
+          "PATIENT_ID": "PATIENT ID:",
+          "CONTENT": "Please schedule a new appointment for this patient"
+      }
+  },
+  "CHECK_OUT": {
+      "TITLE": "Check out patient",
+      "SELECT_PATIENT_ID_PLACEHOLDER": "select patient ID",
+      "PAGE_CONTENT": {
+          "EQUIPMENT_PROVIDED": "Equipment provided",
+          "PAYMENT_APPROVED": "Payment approved",
+          "INFO_MESSAGE": {
+              "NOTE": {
+                  "TITLE": "Note !",
+                  "MESSAGE": "Please schedule follow-up in 2 months"
+              }
+          },
+          "BUTTONS": {
+              "SUBMIT_AND_CHECK_OUT": "submit & check out"
+          }
+      },
+      "CHECKED_OUT": {
+          "TITLE": "Patient checked out",
+          "PATIENT_ID": "PATIENT ID:"
+      }
+  },
+  "BROWSE_PATIENTS": {
+      "PAGE_CONTENT": {
+          "TYPE_ID_PLACEHOLDER": "type ID",
+          "BUTTONS": {
+              "ALL_PATIENTS": "all patients",
+              "MY_PATIENTS": "my patients",
+              "CLEAR_ALL_FILTERS": "clear all filters"
+          },
+          "FILTERS": {
+              "BY_PATHOLOGY": "Filter by pathology",
+              "BY_STATUS": "Filter by status"
+          },
+          "LIST": {
+              "SHOWING": "Showing",
+              "RESULTS": "results of"
+          }
+      },
+      "PATIENT": {
+          "AGE": "Age",
+          "PATHOLOGY": "Pathology:",
+          "STATUS": "Status",
+          "SESSION": "Session"
+      },
+      "STEP": {
+          "OUTCOME": {
+              "GRAPH": {
+                  "CHOOSE_FILTER_PLACEHOLDER": "Choose filter"
+              }
+          }
+      }
+  },
+  "SHARED": {
+      "BUTTONS": {
+          "BACK": "back"
+      }
+  }
+}

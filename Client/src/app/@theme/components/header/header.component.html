@@ -1,0 +1,13 @@
+<div class="header-container" [class.right]="position === 'normal'" [class.left]="position === 'inverse'">
+  <div class="logo-containter">
+    <div class="logo" (click)="goToHome()"><span>Apos CTS back office</span></div>
+  </div>
+</div>
+
+<div class="header-container">
+  <nb-actions size="medium" [class.left]="position === 'normal'" [class.right]="position === 'inverse'">
+    <nb-action *nbIsGranted="['view', 'user']">
+      <nb-user *ngIf="sessionStore.getIsAuth" [nbContextMenu]="userMenu" [name]="sessionStore.getUserName"></nb-user>
+    </nb-action>
+  </nb-actions>
+</div>

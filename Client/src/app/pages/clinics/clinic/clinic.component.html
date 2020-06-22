@@ -1,0 +1,15 @@
+<article>
+    <div class="row">
+        <div class="col-md-10">
+            <h2>{{clinic.name}}</h2>
+        </div>
+        <div class="col-md-2">
+            <div class="button-container">
+                <button nbButton shape="rectangle" status="success" class="btn-demo"
+                    [routerLink]="['/pages/clinics/edit-clinic', clinic.id]">
+                    Edit
+                </button>
+            </div>
+        </div>
+    </div>
+</article>

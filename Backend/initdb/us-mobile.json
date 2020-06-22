@@ -1,0 +1,172 @@
+{
+    "LOGIN": {
+        "TITLE": {
+            "SUBTITLE": "Patient Questionnaires App",
+            "QR": "Please point this tablet’s camera to the QR code as it appears in the Apos CTS system. Note: patient’s QR will only be available as long as the patient is checked-in through Apos CTS."
+        },
+        "ACTIONS": {
+            "START": "Click to start"
+        }
+    },
+    "PATIENT": {
+        "TITLE": {
+            "TITLE": "First step, let us know a little bit more about yourself",
+            "SUBTITLE": "Please fill these following details"
+        },
+        "ACTIONS": {
+            "YEAR": "Year of birth",
+            "GENDER": "Gender",
+            "MALE": "Male",
+            "FEMALE": "Female",
+            "HEIGHT": "Height({{ MeasuringSystems }})",
+            "WEIGHT": "Weight({{ MeasuringSystems }})",
+            "POSTCODE": "Postcode",
+            "INSURER": "Insurer name",
+            "ABOUT": "Where I heard of Apos"
+        }
+    },
+    "TERMS": {
+        "TITLE": {
+            "TITLE": "Welcome to AposTherapy",
+            "SUBTITLE": "Please read the following introduction and sign the agreement box at the bottom.",
+            "BUTTON": "AposTherapy® Center Team"
+        },
+        "ACTIONS": {
+            "TERMS": "I agree to allow anonymous use of my clinical measurements collected during the treatment for the purpose of scientific research and/or training of AposTherapy® trained clinicians. (Your identity and confidentiality will be strictly protected in accordance with the law.)",
+            "UPDATES": "I agree to receive automated updates through the Apos App (such as reminders about upcoming appointments with my AposTherapy® trained clinician).",
+            "INFO": "I am interested in receiving important information related to AposTherapy®. (You may opt out of this at any time.)"
+        }
+    },
+    "COMPONENTS": {
+        "TITLE": {
+            "NODIFFICULTY": "No difficulty",
+            "EXTREMEDIFFICULTY": "Extreme difficulty",
+            "TERRIBLE": "Terrible",
+            "FANTASTIC": "Fantastic",
+            "NOTATALLLIKELY": "Not at all likely",
+            "NEUTRAL": "Neutral",
+            "EXTREMELYLIKELY": "Extremely likely"
+        },
+        "ACTIONS": {
+            "YES": "Yes",
+            "NO": "No"
+        }
+    },
+    "MAIN": {
+        "TITLE": {
+            "TITLE": "Good job, now let’s fill this short list of questionnaires",
+            "WELLDONE": "You have completed all questionnaires. You are about to see your AposTherapy clinician soon.",
+            "THANK": "Thank You"
+        },
+        "ACTIONS": {
+            "START": "Click to start"
+        }
+    },
+    "TREATMENTS": {
+        "TITLE": {
+            "TITLE": "Other treatments",
+            "SUBTITLE": "The information will help us understand your medical history.",
+            "INSTRUCTIONS": "Please specify which other medical procedures you are currently going through, or went through prior to Apos.",
+            "SURGERY": "Which surgery was recommended?",
+            "PERIOD": "Choose Period",
+            "MEDICATION": "Medication type",
+            "PHYSIOTHERAPY": "How many Physiotherapy sessions did you have?",
+            "SIDE": "Which side?",
+            "JOINT": "Choose Joint",
+            "FREQUENCY": "Choose Frequency",
+            "INJECTION": "Injection type",
+            "NUMBER": "Choose Number",
+            "XRAY": "Have you had an X-ray?",
+            "CT": "Have you had a CT?",
+            "MRI": "Have you had an MRI?",
+            "HOWMANY": "How many?",
+            "LASTONE": "When was the last one?",
+            "HAVESURGERY": "Have you been recommended surgery relating the condition you came to Apos today?",
+            "WHENRECOMMENDED": "When were you recommended?",
+            "HAVEPHYSIOTHERAPY": "Have you had Physiotherapy in past year for the condition you came to Apos today?",
+            "HAVEINJECTION": "Have you had an Injection in the past year for the condition you came to Apos today?",
+            "WHENINJECTION": "When was the last injection?",
+            "HAVEPAINMEDICATION": "Have you used any pain medication in the last year for your disease?",
+            "PILLS": "Number of pills"
+        },
+        "ACTIONS": {
+            "ARTHROSCOPY": "Arthroscopy",
+            "ACL": "ACL reconstruction",
+            "UKR": "Unicompartmental knee replacement",
+            "KNEER": "Knee replacement",
+            "HIPR": "Hip replacement",
+            "TKR": "TKR revision",
+            "THR": "THR revision",
+            "SPINE": "Spine surgery",
+            "OTHER": "Other",
+            "QUARTER": "0-3 months",
+            "HALF": "3-6 months",
+            "OVERHALF": "> 6 months",
+            "OVERYEAR": "> 1 year",
+            "OPIOIDS": "Opioids",
+            "NSAIDS": "NSAIDs",
+            "OTHERPAIN": "Other prescription pain medication",
+            "LEFT": "Left",
+            "RIGHT": "Right",
+            "BILATERAL": "Bilateral",
+            "PEDIATRIC": "Pediatric",
+            "NEUROLOGICAL": "Opioids",
+            "UPPERBACK": "Upper back",
+            "FOOT&ANKLE": "Foot & ankle",
+            "HIP": "Hip",
+            "LOWERBACK": "Lower back",
+            "KNEE": "Knee",
+            "EVERYDAY": "every day",
+            "SIXTIMES": "4-6 times a week",
+            "TWICE": "2-3 times a week",
+            "ONCE": "0-1 times a week",
+            "STEROID": "Steroid injection",
+            "HYALURONIC": "Hyaluronic acid injection",
+            "DONTKNOW": "Do not know"
+        }
+    },
+    "QUESTIONNAIRE": {
+        "TITLE": {
+            "QUESTIONNAIRE": "QUESTIONNAIRE",
+            "PAGE": "PAGE"
+        }
+    },
+    "FINISHED": {
+        "TITLE": {
+            "TITLE": "Other treatments",
+            "SUBTITLE": "Only {{ counter }} questionnaires to go!",
+            "COMPLETE": "All Q Complete",
+            "WELLDONE": "Well done",
+            "INSTRUCTIONS": "By pressing NEXT you will move on to the next questionnaire and won’t be able to return or change answers in this questionnaire.",
+            "CONTINUE": "Let's continue..."
+        }
+    },
+    "MENU": {
+        "TITLE": {
+            "ID": "ID",
+            "SESSION": "Session",
+            "SUBTITLE": "Patient Questionnaires App"
+        },
+        "ACTIONS": {
+            "MANAGELIST": "Manage list",
+            "LANGUAGE": "Language",
+            "LOGOUT": "Log out"
+        }
+    },
+    "LISTQUESTIONNARIES": {
+        "TITLE": {
+            "TITLE": "Manage list of questionnaires"
+        },
+        "ACTIONS": {
+            "UPDATE": "UPDATE & CLOSE"
+        }
+    },
+    "SHARED": {
+        "BUTTONS": {
+            "NEXT": "Next",
+            "BACK": "Back",
+            "SUBMIT": "Submit",
+            "CANCEL": "Cancel"
+        }
+    }
+}

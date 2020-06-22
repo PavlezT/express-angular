@@ -1,0 +1,8 @@
+<nb-card>
+    <nb-card-header>Territories</nb-card-header>
+    <nb-list>
+        <nb-list-item *ngFor="let territory of territories$ | async">
+            <ngx-territory [territory]="territory"></ngx-territory>
+        </nb-list-item>
+    </nb-list>
+</nb-card>

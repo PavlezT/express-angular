@@ -1,0 +1,111 @@
+{
+   "name":"Satisfaction-FU",
+   "label":"Patient satisfaction (Follow-up visits)",
+   "locale": "us-us",
+   "desc":"",
+   "instructions":"",
+   "sections":[
+      {
+         "name":"",
+         "instructions":"",
+         "sectionitems":[
+            {
+               "id":1,
+               "showid":"yes",
+               "q":"Ease and convenience of scheduling your AposTherapy appointment.",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"Not Satisfied At All"
+                     },
+                     {
+                        "id":2,
+                        "text":"Not Satisfied"
+                     },
+                     {
+                        "id":3,
+                        "text":"Satisfied a Bit"
+                     },
+                     {
+                        "id":4,
+                        "text":"Satisfied"
+                     },
+                     {
+                        "id":5,
+                        "text":"Very Satisfied"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":2,
+               "showid":"yes",
+               "q":"Evaluation and treatment you were given by your Therapist today.",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"Not Satisfied At All"
+                     },
+                     {
+                        "id":2,
+                        "text":"Not Satisfied"
+                     },
+                     {
+                        "id":3,
+                        "text":"Satisfied a Bit"
+                     },
+                     {
+                        "id":4,
+                        "text":"Satisfied"
+                     },
+                     {
+                        "id":5,
+                        "text":"Very Satisfied"
+                     }
+                  ]
+               }
+            }
+         ]
+      },
+      {
+         "name":"",
+         "instructions":"",
+         "sectionitems":[
+            {
+               "id":3,
+               "showid":"yes",
+               "q":"Was your pain or function improved by today's evaluation and treatment?",
+               "a":{
+                  "atype":"yesno"
+               }
+            },
+            {
+               "id":4,
+               "showid":"yes",
+               "q":"Would you refer a friend for AposTherapy treatment?",
+               "a":{
+                  "atype":"yesno"
+               }
+            }
+         ]
+      },
+      {
+         "name":"",
+         "instructions":"",
+         "sectionitems":[
+            {
+               "id":5,
+               "showid":"yes",
+               "q":"Rate your satisfaction with AposTherapy to date (0=terrible, 100=fantastic):",
+               "a":{
+                  "atype":"vas"
+               }
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,29 @@
+{
+	"SERVER": {
+	  "base_url": "http://localhost",
+	  "port": 3000,
+	  "uiUrl": "http://localhost:3000",
+	  "prefix": "/api"
+	},
+	"SESSION": {
+		"salt": "$2b$08$j.hh7XJkhDOh.3Bx6UTL6e",
+		"secret": "Back_Office_Secret",
+		"secure": false,
+		"expiry": 1209600000
+	},
+	"DB": {
+		"url": "cluster.mongodb.net/project123",
+		"user": "db_user",
+		"password": "GxTCBbExL29Gj8z",
+		"ssl": false
+	},
+	"AWS": {
+		"IAM_USER_KEY": "IAM_USER_KEY",
+		"IAM_USER_SECRET": "IAM_USER_SECRET",
+		"USER_POOL":"us-east-2",
+		"BUCKET_NAME": "dev-bucket-for-documents",
+		"SIGNATURE_VERSION": "v4",
+		"REGION": "us-east-2"
+	}
+ }
+ 

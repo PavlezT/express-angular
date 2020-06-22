@@ -1,0 +1,175 @@
+{
+   "name":"AposShortForm",
+   "label":"Apos short form",
+   "locale": "us-us",
+   "desc":"",
+   "instructions":"",
+   "sections":[
+      {
+         "name":"Section A. Pain and functional limitation assessment",
+         "instructions":"Think about the difficulty you have experienced completing/ undergoing the following daily physical activities during the past 4 weeks.",
+         "sectionitems":[
+            {
+               "id":1,
+               "showid":"yes",
+               "q":"When walking on a flat surface?",
+               "a":{
+                  "atype":"vas"
+               }
+            },
+            {
+               "id":2,
+               "showid":"yes",
+               "q":"While going shopping or traveling outside of your home?",
+               "a":{
+                  "atype":"vas"
+               }
+            },
+            {
+               "id":3,
+               "showid":"yes",
+               "q":"During the past 4 weeks, how much did pain interfere with your normal work (including both work outside the home and housework)?",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"Not at all"
+                     },
+                     {
+                        "id":2,
+                        "text":"Slightly"
+                     },
+                     {
+                        "id":3,
+                        "text":"Moderately"
+                     },
+                     {
+                        "id":4,
+                        "text":"Substantially"
+                     },
+                     {
+                        "id":5,
+                        "text":"Extremely"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":4,
+               "showid":"yes",
+               "q":"During the past 4 weeks, how much of the time has your physical health or emotional problems interfered with your social activities (like visiting friends, relatives, etc.)?",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"All of the time"
+                     },
+                     {
+                        "id":2,
+                        "text":"Most of the time"
+                     },
+                     {
+                        "id":3,
+                        "text":"Some of the time"
+                     },
+                     {
+                        "id":4,
+                        "text":"A little of the time"
+                     },
+                     {
+                        "id":5,
+                        "text":"None of the time"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":5,
+               "showid":"yes",
+               "q":"Does your health now limit you in walking 100 meters/100 yards?",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"Yes, limited a lot."
+                     },
+                     {
+                        "id":2,
+                        "text":"Yes, limited a little."
+                     },
+                     {
+                        "id":3,
+                        "text":"No, not limited at all"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":6,
+               "showid":"yes",
+               "q":"Have you felt so down in the dumps nothing could cheer you up?",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"All of the time"
+                     },
+                     {
+                        "id":2,
+                        "text":"Most of the time"
+                     },
+                     {
+                        "id":3,
+                        "text":"A good bit of the time"
+                     },
+                     {
+                        "id":4,
+                        "text":"Some of the time"
+                     },
+                     {
+                        "id":5,
+                        "text":"A little of the time"
+                     },
+                     {
+                        "id":6,
+                        "text":"None of the time"
+                     }
+                  ]
+               }
+            }
+         ]
+      },
+      {
+         "name":"Section B. Patient satisfaction",
+         "instructions":"",
+         "sectionitems":[
+            {
+               "id":7,
+               "showid":"yes",
+               "q":"Please rate your satisfaction with AposTherapy to date?",
+               "a":{
+                  "atype":"vas"
+               }
+            }
+         ]
+      },
+      {
+         "name":"Section C. Net promoter score",
+         "instructions":"",
+         "sectionitems":[
+            {
+               "id":8,
+               "showid":"yes",
+               "q":"How likely is it that you would recommend AposTherapy to a friend or colleague?",
+               "a":{
+                  "atype":"vas"
+               }
+            }
+         ]
+      }
+   ]
+}

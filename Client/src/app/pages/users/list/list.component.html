@@ -1,0 +1,8 @@
+<nb-card>
+    <nb-card-header> Users</nb-card-header>
+    <nb-list>
+        <nb-list-item *ngFor="let user of users$ | async">
+            <ngx-user [user]="user"></ngx-user>
+        </nb-list-item>
+    </nb-list>
+</nb-card>

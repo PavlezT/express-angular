@@ -1,0 +1,141 @@
+<div class="button-container">
+    <button nbButton shape="rectangle" status="success" class="btn-demo" (click)="back()">
+        Back
+    </button>
+</div>
+
+<div class="row">
+    <div class="col-md-9">
+        <nb-card>
+            <nb-card-header>Edit Territory</nb-card-header>
+            <nb-card-body>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Territory name</label>
+                    <div class="col-sm-9">
+                        <input type="text" [(ngModel)]="territory.name" (change)="onItemChange()" name="name"
+                            class="form-control" placeholder="Territory name" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Postcode</label>
+                    <div class="col-sm-9 postcode">
+                        <input class="postcode-input" type="checkbox" (change)="onItemChange()"
+                            [(ngModel)]="territory.postcode">
+                        <span class="postcode-status">{{territory.postcode ? 'Enabled' : 'Disabled'}}</span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">is UK</label>
+                    <div class="col-sm-9 postcode">
+                        <input class="postcode-input" type="checkbox" (change)="onItemChange()"
+                            [(ngModel)]="territory.isUK">
+                        <span class="postcode-status">{{territory.isUK ? 'Enabled' : 'Disabled'}}</span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3">Unit system</label>
+                    <div class="col-sm-9">
+                        <div class="form-check">
+                            <label class="custom-control custom-radio" *ngFor="let item of unitSystems">
+                                <input type="radio" class="custom-control-input" name="unitSystem"
+                                    [(ngModel)]="territory.unitSystem" [value]="item.value" (change)="onItemChange()">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">{{item.name}}</span>
+                            </label>
+                        </div>
+                        <div class="form-check">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Referrals</label>
+                    <div class="col-sm-9">
+                        <ngx-bo-smart-table (onTableDataUpdated)="handleDataUpdates($event)" [tableName]="'referrals'"
+                            [tableData]="territory.referrals" [settings]="referralSettings" [itemName]="'referral'">
+                        </ngx-bo-smart-table>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Payment types</label>
+                    <div class="col-sm-9">
+                        <ngx-bo-smart-table (onTableDataUpdated)="handleDataUpdates($event)"
+                            [tableName]="'paymentTypes'" [tableData]="territory.paymentTypes"
+                            [settings]="paymentTypeSettings" [itemName]="'payment type'">
+                        </ngx-bo-smart-table>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Activity statuses</label>
+                    <div class="col-sm-9">
+                        <ngx-bo-smart-table (onTableDataUpdated)="handleDataUpdates($event)"
+                            [tableName]="'activityStatus'" [tableData]="territory.activityStatus"
+                            [settings]="activityStatusSettings" [itemName]="'activity status'">
+                        </ngx-bo-smart-table>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Supported packages</label>
+                    <div class="col-sm-9">
+                        <ngx-bo-smart-table (onTableDataUpdated)="handleDataUpdates($event)"
+                            [tableName]="'supportedPackages'" [tableData]="territory.supportedPackages"
+                            [settings]="supportedPackagesSettings" [itemName]="'supported package'">
+                        </ngx-bo-smart-table>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Drop out reasons</label>
+                    <div class="col-sm-9">
+                        <ngx-bo-smart-table (onTableDataUpdated)="handleDataUpdates($event)"
+                            [tableName]="'dropOutReasons'" [tableData]="territory.dropOutReasons"
+                            [settings]="dropOutReasonsSettings" [itemName]="'drop out reason'">
+                        </ngx-bo-smart-table>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Insurers</label>
+                    <div class="col-sm-9">
+                        <ngx-bo-smart-table (onTableDataUpdated)="handleDataUpdates($event)" [tableName]="'insurers'"
+                            [tableData]="territory.insurers" [settings]="insurersListSettings" [itemName]="'insurer'">
+                        </ngx-bo-smart-table>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <button type="submit" class="btn btn-danger" (click)="deleteTerritory()">Delete</button>
+                    </div>
+                </div>
+            </nb-card-body>
+        </nb-card>
+        <nb-card class="own-scroll">
+            <nb-card-header> Clinics </nb-card-header>
+            <nb-list *ngIf="clinics && clinics.length" listenWindowScroll>
+                <nb-list-item *ngFor="let clinic of clinics">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <h2>{{clinic.name}}</h2>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="button-container">
+                                <button nbButton shape="rectangle" status="success" class="btn-demo"
+                                    [routerLink]="['/pages/clinics/edit-clinic', clinic.id]">
+                                    Edit
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </nb-list-item>
+            </nb-list>
+            <!-- fix me -->
+            <nb-list *ngIf="clinics && clinics.length === 0" listenWindowScroll>
+                <nb-list-item>
+                    <div class="row">
+                        <div class="col-md-10">
+                            <h2>No clinics found</h2>
+                        </div>
+                    </div>
+                </nb-list-item>
+            </nb-list>
+        </nb-card>
+    </div>
+</div>

@@ -1,0 +1,141 @@
+@import '../../@theme/styles/themes';
+@import '~bootstrap/scss/mixins/breakpoints';
+@import '~@nebular/theme/styles/global/breakpoints';
+
+@include nb-install-component() {
+  .solar-card nb-card-header {
+    border: none;
+    padding-bottom: 0;
+  }
+
+  @include media-breakpoint-down(sm) {
+    ngx-traffic {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-down(is) {
+    /deep/ nb-card.large-card {
+      height: nb-theme(card-height-medium);
+    }
+  }
+}
+
+.pathology-name {
+  float: left;
+}
+
+.header-settings {
+  padding-bottom: 10px;
+}
+
+.form-group {
+  padding-top: 10px;
+}
+
+.checkbox-wrapper {
+  text-align: center;
+}
+
+.row-marketing {
+  padding: 20px;
+}
+
+.marketing {
+  margin-bottom: 10px;
+}
+
+.rigth-position {
+  float: right;
+}
+
+.table-header {
+  text-align: center;
+}
+
+:host /deep/ nb-list-item:first-child {
+  border-top: none !important;
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputfile + label {
+  max-width: 80%;
+  font-size: 1.25rem;
+  /* 20px */
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.375rem;
+  /* 10px 20px */
+}
+
+.no-js .inputfile + label {
+  display: none;
+}
+
+.inputfile:focus + label,
+.inputfile.has-focus + label {
+  outline: 1px dotted #000;
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+/* style 1 */
+
+.inputfile-1 + label {
+  color: white;
+  margin-bottom: 0;
+  height: 42px;
+  background-color: #ffa100;
+}
+
+.inputfile-1:focus + label,
+.inputfile-1.has-focus + label,
+.inputfile-1 + label:hover {
+  background-color: #ffae24;
+}
+
+.inner-upload-text {
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  font-weight: 500;
+  font-family: Roboto;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+}
+
+nb-card-body {
+  border-bottom: 1px solid #ebeef2;
+}
+
+.custom-button {
+  width: 114px;
+}
+
+.custom-checkbox {
+  display: flex;
+  input {
+    margin: auto;
+  }
+}
+
+.custom-list {
+  overflow: hidden;
+  .custom-list-item {
+    padding-left: 0;
+  }
+  .custom-list-item:last-of-type {
+    border-bottom: none;
+  }
+}

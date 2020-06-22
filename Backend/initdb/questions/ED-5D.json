@@ -1,0 +1,179 @@
+{
+   "name":"ED-5D",
+   "label":"Quality of life (EQ-5D)",
+   "locale": "us-us",
+   "desc":"",
+   "instructions":"",
+   "sections":[
+      {
+         "name":"",
+         "instructions":"Under each heading, please tick the ONE box that best describes your health TODAY.",
+         "sectionitems":[
+            {
+               "id":1,
+               "showid":"yes",
+               "q":"Mobility",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"I have no problems in walking about"
+                     },
+                     {
+                        "id":2,
+                        "text":"I have slight problems in walking about"
+                     },
+                     {
+                        "id":3,
+                        "text":"I have moderate problems in walking about"
+                     },
+                     {
+                        "id":4,
+                        "text":"I have severe problems in walking about"
+                     },
+                     {
+                        "id":5,
+                        "text":"I am unable to walk about"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":2,
+               "showid":"yes",
+               "q":"Self-care",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"I have no problems washing or dressing myself"
+                     },
+                     {
+                        "id":2,
+                        "text":"I have slight problems washing or dressing myself"
+                     },
+                     {
+                        "id":3,
+                        "text":"I have moderate problems washing or dressing myself"
+                     },
+                     {
+                        "id":4,
+                        "text":"I have severe problems washing or dressing myself"
+                     },
+                     {
+                        "id":5,
+                        "text":"I am unable to wash or dress myself"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":3,
+               "showid":"yes",
+               "q":"Usual activities (e.g. work, study, housework, family or leisure activities)",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"I have no problems doing my usual activities"
+                     },
+                     {
+                        "id":2,
+                        "text":"I have slight problems doing my usual activities"
+                     },
+                     {
+                        "id":3,
+                        "text":"I have moderate problems doing my usual activities"
+                     },
+                     {
+                        "id":4,
+                        "text":"I have severe problems doing my usual activities"
+                     },
+                     {
+                        "id":5,
+                        "text":"I am unable to do my usual activities"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":4,
+               "showid":"yes",
+               "q":"Pain / Discomfort",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"I have no pain or discomfort"
+                     },
+                     {
+                        "id":2,
+                        "text":"I have slight pain or discomfort"
+                     },
+                     {
+                        "id":3,
+                        "text":"I have moderate pain or discomfort"
+                     },
+                     {
+                        "id":4,
+                        "text":"I have severe pain or discomfort"
+                     },
+                     {
+                        "id":5,
+                        "text":"I have extreme pain or discomfort"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":5,
+               "showid":"yes",
+               "q":"Anxiety / Depression",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"I am not anxious or depressed"
+                     },
+                     {
+                        "id":2,
+                        "text":"I am slightly anxious or depressed"
+                     },
+                     {
+                        "id":3,
+                        "text":"I am moderately anxious or depressed"
+                     },
+                     {
+                        "id":4,
+                        "text":"I am severely anxious or depressed"
+                     },
+                     {
+                        "id":5,
+                        "text":"I am extremely anxious or depressed"
+                     }
+                  ]
+               }
+            }
+         ]
+      },
+      {
+         "name":"",
+         "instructions":"",
+         "sectionitems":[
+            {
+               "id":6,
+               "showid":"no",
+               "q":"We would like to know how good or bad your health is TODAY.",
+               "a":{
+                  "atype":"vas"
+               }
+            }
+         ]
+      }
+   ]
+}

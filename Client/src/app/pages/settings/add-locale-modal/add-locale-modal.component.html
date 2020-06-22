@@ -1,0 +1,30 @@
+<nb-card>
+    <nb-card-header>Add locale</nb-card-header>
+    <nb-card-body>
+        <form [formGroup]="addLocaleFormGroup">
+            <div class="form-group row">
+                <label for="inputLocale" class="col-sm-3 col-form-label">Locale</label>
+                <div class="col-sm-9">
+                    <input
+                        [ngClass]="{'form-control-danger': addLocaleFormGroup.get('locale').invalid && addLocaleFormGroup.get('locale').touched}"
+                        type="text" formControlName="locale" class="form-control" id="inputLocale"
+                        placeholder="Locale" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputLanguage" class="col-sm-3 col-form-label">Language</label>
+                <div class="col-sm-9">
+                    <input
+                        [ngClass]="{'form-control-danger': addLocaleFormGroup.get('language').invalid && addLocaleFormGroup.get('language').touched}"
+                        type="text" formControlName="language" class="form-control" id="inputLanguage"
+                        placeholder="Language" />
+                </div>
+            </div>
+        </form>
+    </nb-card-body>
+    <nb-card-footer>
+        <button nbButton status="danget" (click)="dismiss()">Cancel</button>
+        <button style="float: right" nbButton status="success" (click)="dismiss()"
+            [disabled]="addLocaleFormGroup.invalid">Add</button>
+    </nb-card-footer>
+</nb-card>

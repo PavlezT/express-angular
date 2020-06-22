@@ -1,0 +1,240 @@
+<nb-card>
+  <nb-card-header>
+    <div class="row">
+      <div class="col-lg-4 col-lg-4 col-xxxl-4">
+        <span>Pathologies</span>
+      </div>
+      <div class="col-lg-3 col-lg-3 col-xxxl-3" *ngIf="settingsStore.statePathologies === loadingState.success">
+        <span>Conditions</span>
+      </div>
+      <div class="col-lg-2 col-lg-2 col-xxxl-2 offset-lg-3"
+        *ngIf="settingsStore.statePathologies === loadingState.success">
+        <span>Side presence</span>
+      </div>
+    </div>
+  </nb-card-header>
+
+  <nb-card-body>
+
+    <div class="row">
+
+      <div class="col-lg-2">
+        <label>Choose area</label>
+        <select class="form-control" [(ngModel)]="selectedArea" (change)="onAreaSelected()">
+          <option *ngFor="let area of areas">{{ area }}</option>
+        </select>
+      </div>
+
+      <div class="col-lg-7 offset-lg-2" *ngIf="settingsStore.statePathologies === loadingState.success">
+        <nb-list class="custom-list">
+          <nb-list-item class="custom-list-item" *ngFor="let pathology of settingsStore.listPathologies; let i = index">
+            <div class="row">
+              <div class="col-lg-10">
+                <div class="row" *ngIf="!pathology.editMode" (dblclick)="pathology.editMode = true">
+                  <div class="col-lg-8" style="margin-right: 22px"> <span>{{ pathology.value.text }}</span></div>
+
+                  <div>
+                    <button class="btn btn-danger custom-button"
+                      (click)="deletePathology(i, settingsStore.listPathologies, pathology.id, pathology.value.text)">
+                      Remove
+                    </button>
+                  </div>
+                </div>
+
+                <div class="row" *ngIf="pathology.editMode">
+                  <div class="col-lg-8" style="padding-right: 0px">
+                    <input [(ngModel)]="pathology.value.text" class="form-control" />
+                  </div>
+
+                  <button class="btn btn-warning custom-button" (click)="updatePathology(pathology)"
+                    style="margin-left: 21px">
+                    Edit
+                  </button>
+                </div>
+
+              </div>
+              <div class="col-lg-1 offset-lg-1 custom-checkbox">
+                <input type="checkbox" [(ngModel)]="pathology.value.side" (change)="updatePathology(pathology)">
+              </div>
+            </div>
+          </nb-list-item>
+        </nb-list>
+      </div>
+    </div>
+  </nb-card-body>
+
+  <nb-card-footer *ngIf="settingsStore.statePathologies === loadingState.success">
+    <div class="row">
+      <div class="col-lg-4 offset-lg-4" style="padding-right: 21px">
+        <input type="text" class="form-control" placeholder="Add new pathology" [(ngModel)]="addPathology.text" />
+      </div>
+      <button class="btn btn-success custom-button" (click)="addPatology()">
+        Add
+      </button>
+      <div class="col-lg-1 offset-lg-1 custom-checkbox" style="padding-left: 38px">
+        <input type="checkbox" [(ngModel)]="addPathology.side">
+      </div>
+    </div>
+  </nb-card-footer>
+</nb-card>
+
+<nb-card *ngIf="settingsStore.stateRecommendations === loadingState.success">
+  <nb-card-header>
+    <span>Surgery recommendations</span>
+  </nb-card-header>
+  <nb-card-body>
+    <nb-list class="custom-list">
+
+      <nb-list-item class="custom-list-item"
+        *ngFor="let recommendation of settingsStore.listRecommendations; let i = index">
+        <div class="row" *ngIf="!recommendation.editMode; else editMode" (dblclick)="recommendation.editMode = true">
+          <span class="col-lg-10">{{ recommendation.value }}</span>
+
+          <button class="btn btn-danger custom-button"
+            (click)="deleteRecommendation(i, settingsStore.listRecommendations, recommendation.id)">
+            Remove
+          </button>
+        </div>
+        <ng-template #editMode>
+          <div class="row">
+            <div class="col-lg-7">
+              <input [(ngModel)]="recommendation.value" class="form-control" />
+            </div>
+            <button class="btn btn-warning custom-button" (click)="updateRecommendation(recommendation)">
+              Edit
+            </button>
+          </div>
+        </ng-template>
+      </nb-list-item>
+    </nb-list>
+  </nb-card-body>
+
+  <nb-card-footer>
+    <div class="row">
+      <div class="col-lg-7" style="padding-right: 25px">
+        <input type="text" class="form-control" placeholder="Add surgery recommendation"
+          [(ngModel)]="surgeryRecommend" />
+      </div>
+      <button class="btn btn-success custom-button" (click)="addRecommendation()">
+        Add
+      </button>
+    </div>
+  </nb-card-footer>
+</nb-card>
+
+
+<nb-card *ngIf="settingsStore.stateMarketingItems === loadingState.success">
+  <nb-card-header>Dashboard marketing items</nb-card-header>
+  <nb-card-body>
+    <nb-list class="custom-list">
+
+      <nb-list-item class="custom-list-item" *ngFor="let item of settingsStore.listMarketingItems">
+        <div class="row">
+          <div class="col-lg-5">
+            <input class="form-control marketing" [(ngModel)]="item.text" />
+          </div>
+          <div class="col-lg-5">
+            <input class="form-control" [(ngModel)]="item.count" />
+          </div>
+          <div class="col-lg-2">
+            <button class="btn btn-success custom-button" (click)="updateMarketingItem(item)">
+              Update
+            </button>
+          </div>
+        </div>
+      </nb-list-item>
+    </nb-list>
+  </nb-card-body>
+</nb-card>
+
+<nb-card>
+  <nb-card-header>
+    <div class="container">
+      <div class="row">
+        <div class="col-auto mr-auto justify-content-start">
+          <span>CTS Languages</span>
+        </div>
+        <div class="col-lg-2 col-lg-2 col-xxxl-2 justify-content-end">
+          <button class="btn btn-success" (click)="addCTSLocale()">
+            Add locale
+          </button>
+        </div>
+      </div>
+    </div>
+  </nb-card-header>
+  <nb-card-body>
+    <nb-list class="custom-list">
+      <nb-list-item class="custom-list-item" *ngFor="let language of ctsLanguages$ | async; let i = index">
+        <div class="row row-marketing">
+          <div class="col-lg-5">
+            <span>Language: {{language.name}}; Locale: {{language.locale}}</span>
+          </div>
+          <div class="col-lg-3">
+            <div class="box">
+              <input type="file" name="file-1[]" [id]="i + 'input1'" class="inputfile inputfile-1"
+                (change)="updateCTSLanguage($event, language.locale)" data-multiple-caption="{count} files selected"
+                multiple />
+              <label [for]="i + 'input1'"> <span class="inner-upload-text">Update vocabulary</span></label>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <button class="btn btn-danger custom-button" (click)="deleteCTSLanguage(language.locale, language.name)">
+              Delete
+            </button>
+          </div>
+          <div class="col-lg-2" (click)="downloadCTSLanguage(language.locale)">
+            <button class="btn btn-success">
+              Download vocabulary
+            </button>
+          </div>
+        </div>
+      </nb-list-item>
+    </nb-list>
+  </nb-card-body>
+</nb-card>
+
+<nb-card>
+  <nb-card-header>
+    <div class="container">
+      <div class="row">
+        <div class="col-auto mr-auto justify-content-start">
+          <span>AposQ Languages</span>
+        </div>
+        <div class="col-lg-2 col-lg-2 col-xxxl-2 justify-content-end">
+          <button class="btn btn-success" (click)="addMobileLocale()">
+            Add locale
+          </button>
+        </div>
+      </div>
+    </div>
+  </nb-card-header>
+  <nb-card-body>
+    <nb-list class="custom-list">
+      <nb-list-item class="custom-list-item" *ngFor="let language of mobileLanguages$ | async; let i = index">
+        <div class="row row-marketing">
+          <div class="col-lg-5">
+            <span>Language: {{language.name}}; Locale: {{language.locale}}</span>
+          </div>
+          <div class="col-lg-3">
+            <div class="box">
+              <input type="file" name="file-2[]" [id]="i + 'input2'" class="inputfile inputfile-1"
+                (change)="updateMobileLanguage($event, language.locale)" data-multiple-caption="{count} files selected"
+                multiple />
+              <label [for]="i + 'input2'"> <span class="inner-upload-text">Update vocabulary</span></label>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <button class="btn btn-danger custom-button" (click)="deleteMobileLanguage(language.locale, language.name)">
+              Delete
+            </button>
+          </div>
+          <div class="col-lg-2" (click)="downloadMobileLanguage(language.locale)">
+            <button class="btn btn-success">
+              Download vocabulary
+            </button>
+          </div>
+        </div>
+      </nb-list-item>
+    </nb-list>
+  </nb-card-body>
+</nb-card>

@@ -1,0 +1,15 @@
+<article>
+    <div class="row">
+        <div class="col-md-10">
+            <h2>{{user.firstname}} {{user.lastname}}</h2>
+        </div>
+        <div class="col-md-2">
+            <div class="button-container">
+                <button nbButton shape="rectangle" status="success" class="btn-demo"
+                    [routerLink]="['/pages/users/edit-user', user.id]">
+                    Edit
+                </button>
+            </div>
+        </div>
+    </div>
+</article>

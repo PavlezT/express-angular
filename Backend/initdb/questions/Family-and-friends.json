@@ -1,0 +1,49 @@
+{
+   "name":"Family-friends",
+   "label":"Friends and Family",
+   "locale": "us-us",
+   "desc":"",
+   "instructions":"",
+   "sections":[
+      {
+         "name":"",
+         "instructions":"We would like you to think about your recent experience of our service.",
+         "sectionitems":[
+            {
+               "id":1,
+               "showid":"no",
+               "q":"How likely are you to recommend us to friends and family if they needed similar care or treatment?",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"Extremely Likely"
+                     },
+                     {
+                        "id":2,
+                        "text":"Likely"
+                     },
+                     {
+                        "id":3,
+                        "text":"Neither likely or unlikely"
+                     },
+                     {
+                        "id":4,
+                        "text":"Unlikely"
+                     },
+                     {
+                        "id":5,
+                        "text":"Extremely Unlikley"
+                     },
+                     {
+                        "id":6,
+                        "text":"Don't know"
+                     }
+                  ]
+               }
+            }
+         ]
+      }
+   ]
+}

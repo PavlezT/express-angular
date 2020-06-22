@@ -1,0 +1,7 @@
+<nb-card>
+  <nb-card-header>Are you sure you want to delete {{ itemName }}?</nb-card-header>
+  <nb-card-footer>
+    <button nbButton status="danget" (click)="dismiss(false)">Cancel</button>
+    <button nbButton status="success" (click)="dismiss(true)">Yes</button>
+  </nb-card-footer>
+</nb-card>

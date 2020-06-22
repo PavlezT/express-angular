@@ -1,0 +1,900 @@
+{
+   "name": "SF-36",
+   "label": "Quality of life (SF-36)",
+   "locale": "us-us",
+   "desc": "",
+   "instructions":"Please answer every question. Some questions may look like others, but each one is different. Please take the time to read and answer each question carefully by filling in the bubble that best represents your response",
+   "sections": [
+      {
+         "name": "1",
+         "instructions": "",
+         "sectionitems": [{
+               "id":1,
+               "showid": "yes",
+               "q": "In general, would you say your health is:",
+               "a": {
+                  "atype": "scmo",
+                  "scmoanswer": [{
+                        "id":1,
+                        "text": "Excellent"
+                     },
+                     {
+                        "id":2,
+                        "text": "Very Good"
+                     },
+                     {
+                        "id":3,
+                        "text": "Good"
+                     },
+                     {
+                        "id":4,
+                        "text": "Fair"
+                     },
+                     {
+                        "id":5,
+                        "text": "Poor"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":2,
+               "showid": "yes",
+               "q": "Compared to one year ago, how would you rate your health in general now?",
+               "a": {
+                  "atype": "scmo",
+                  "scmoanswer": [{
+                        "id":1,
+                        "text": "Much better now than a year ago"
+                     },
+                     {
+                        "id":2,
+                        "text": "Somewhat better now than a year ago"
+                     },
+                     {
+                        "id":3,
+                        "text": "About the same as one year ago"
+                     },
+                     {
+                        "id":4,
+                        "text": "Somewhat worse now than one year ago"
+                     },
+                     {
+                        "id":5,
+                        "text": "Much worse now than one year ago"
+                     }  
+                  ]
+               }
+            }
+         ]
+      },
+      {
+         "name": "2",
+         "instructions": "The following items are about activities you might do during a typical day. Does your health now limit you in these activities? If so, how much?",
+         "sectionitems": [{
+               "id":3,
+               "showid": "yes",
+               "q": "Vigorous activities, such as running, lifting heavy objects, participating in strenuous sports",
+               "a": {
+                  "atype": "scmo",
+                  "scmoanswer": [{
+                        "id":1,
+                        "text": "Yes, limited a lot"
+                     },
+                     {
+                        "id":2,
+                        "text": "Yes, limited a little"
+                     },
+                     {
+                        "id":3,
+                        "text": "No, not limited at all"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":4,
+               "showid": "yes",
+               "q": "Moderate activities, such as moving a table, pushing a vacuum cleaner, bowling or playing golf?",
+               "a": {
+                  "atype": "scmo",
+                  "scmoanswer": [{
+                        "id":1,
+                        "text": "Yes, limited a lot"
+                     },
+                     {
+                        "id":2,
+                        "text": "Yes, limited a little"
+                     },
+                     {
+                        "id":3,
+                        "text": "No, not limited at all"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":5,
+               "showid": "yes",
+               "q": "Lifting or carrying groceries",
+               "a": {
+                  "atype": "scmo",
+                  "scmoanswer": [{
+                        "id":1,
+                        "text": "Yes, limited a lot"
+                     },
+                     {
+                        "id":2,
+                        "text": "Yes, limited a little"
+                     },
+                     {
+                        "id":3,
+                        "text": "No, not limited at all"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":6,
+               "showid": "yes",
+               "q": "Climbing several flights of stairs",
+               "a": {
+                  "atype": "scmo",
+                  "scmoanswer": [{
+                        "id":1,
+                        "text": "Yes, limited a lot"
+                     },
+                     {
+                        "id":2,
+                        "text": "Yes, limited a little"
+                     },
+                     {
+                        "id":3,
+                        "text": "No, not limited at all"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":7,
+               "showid": "yes",
+               "q": "Climbing one flight of stairs",
+               "a": {
+                  "atype": "scmo",
+                  "scmoanswer": [{
+                        "id":1,
+                        "text": "Yes, limited a lot"
+                     },
+                     {
+                        "id":2,
+                        "text": "Yes, limited a little"
+                     },
+                     {
+                        "id":3,
+                        "text": "No, not limited at all"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":8,
+               "showid": "yes",
+               "q": "Bending, kneeling or stooping",
+               "a": {
+                  "atype": "scmo",
+                  "scmoanswer": [{
+                        "id":1,
+                        "text": "Yes, limited a lot"
+                     },
+                     {
+                        "id":2,
+                        "text": "Yes, limited a little"
+                     },
+                     {
+                        "id":3,
+                        "text": "No, not limited at all"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":9,
+               "showid": "yes",
+               "q": "Walking more than one mile",
+               "a": {
+                  "atype": "scmo",
+                  "scmoanswer": [{
+                        "id":1,
+                        "text": "Yes, limited a lot"
+                     },
+                     {
+                        "id":2,
+                        "text": "Yes, limited a little"
+                     },
+                     {
+                        "id":3,
+                        "text": "No, not limited at all"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":10,
+               "showid": "yes",
+               "q": "Walking several blocks",
+               "a": {
+                  "atype": "scmo",
+                  "scmoanswer": [{
+                        "id":1,
+                        "text": "Yes, limited a lot"
+                     },
+                     {
+                        "id":2,
+                        "text": "Yes, limited a little"
+                     },
+                     {
+                        "id":3,
+                        "text": "No, not limited at all"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":11,
+               "showid": "yes",
+               "q": "Walking one block",
+               "a": {
+                  "atype": "scmo",
+                  "scmoanswer": [{
+                        "id":1,
+                        "text": "Yes, limited a lot"
+                     },
+                     {
+                        "id":2,
+                        "text": "Yes, limited a little"
+                     },
+                     {
+                        "id":3,
+                        "text": "No, not limited at all"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":12,
+               "showid": "yes",
+               "q": "Bathing or dressing yourself",
+               "a": {
+                  "atype": "scmo",
+                  "scmoanswer": [{
+                        "id":1,
+                        "text": "Yes, limited a lot"
+                     },
+                     {
+                        "id":2,
+                        "text": "Yes, limited a little"
+                     },
+                     {
+                        "id":3,
+                        "text": "No, not limited at all"
+                     }
+                  ]
+               }
+            }
+         ]
+      },
+      {
+         "name": "3",
+         "instructions": "During the past 4 weeks, have you had any of the following problems with your work or other regular daily activities as a result of your physical health?",
+         "sectionitems": [{
+               "id":13,
+               "showid": "yes",
+               "q": "Cut down the amount of time you spent on work or other activities?",
+               "a": {
+                  "atype": "yesno"
+               }
+            },
+            {
+               "id":14,
+               "showid": "yes",
+               "q": "Accomplished less than you would like?",
+               "a": {
+                  "atype": "yesno"
+               }
+            },
+            {
+               "id":15,
+               "showid": "yes",
+               "q": "Were limited in the kind of work or other activities",
+               "a": {
+                  "atype": "yesno"
+               }
+            },
+            {
+               "id":16,
+               "showid": "yes",
+               "q": "Had difficulty performing the work or other activities (for example, it took extra time)",
+               "a": {
+                  "atype": "yesno"
+               }
+            }
+         ]
+      },
+      {
+         "name": "4",
+         "instructions": "During the past 4 weeks, have you had any of the following problems with your work or other regular daily activities as a result of any emotional problems (such as feeling depressed or anxious)?",
+         "sectionitems": [{
+               "id":17,
+               "showid": "yes",
+               "q": "Cut down the amount of time you spent on work or other activities?",
+               "a": {
+                  "atype": "yesno"
+               }
+            },
+            {
+               "id":18,
+               "showid": "yes",
+               "q": "Accomplished less than you would like?",
+               "a": {
+                  "atype": "yesno"
+               }
+            },
+            {
+               "id":19,
+               "showid": "yes",
+               "q": "Didn't do work or other activities as carefully as usual",
+               "a": {
+                  "atype": "yesno"
+               }
+            },
+            {
+               "id":20,
+               "showid": "yes",
+               "q": "During the past 4 weeks, to what extent has your physical health or emotional problems interfered with your normal social activities with family, friends, neighbors, or groups?",
+               "a": {
+                  "atype": "scmo",
+                  "scmoanswer": [{
+                        "id":1,
+                        "text": "Not at all"
+                     },
+                     {
+                        "id":2,
+                        "text": "Slightly"
+                     },
+                     {
+                        "id":3,
+                        "text": "Moderately"
+                     },
+                     {
+                        "id":4,
+                        "text": "Quite a bit"
+                     },
+                     {
+                        "id":5,
+                        "text": "Extremely"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":21,
+               "showid": "yes",
+               "q": "How much bodily pain have you had during the past 4 weeks?",
+               "a": {
+                  "atype": "scmo",
+                  "scmoanswer": [{
+                        "id":1,
+                        "text": "None"
+                     },
+                     {
+                        "id":2,
+                        "text": "Very mild"
+                     },
+                     {
+                        "id":3,
+                        "text": "Mild"
+                     },
+                     {
+                        "id":4,
+                        "text": "Moderate"
+                     },
+                     {
+                        "id":5,
+                        "text": "Severe"
+                     },
+                     {
+                        "id":6,
+                        "text": "Very severe"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":22,
+               "showid": "yes",
+               "q": "During the past 4 weeks, how much did pain interfere with your normal work (including both work outside the home and housework)?",
+               "a": {
+                  "atype": "scmo",
+                  "scmoanswer": [{
+                        "id":1,
+                        "text": "Not at all"
+                     },
+                     {
+                        "id":2,
+                        "text": "Slightly"
+                     },
+                     {
+                        "id":3,
+                        "text": "Moderately"
+                     },
+                     {
+                        "id":4,
+                        "text": "Quite a bit"
+                     },
+                     {
+                        "id":5,
+                        "text": "Extremely"
+                     }
+                  ]
+               }
+            }
+         ]
+      },
+      {
+         "name": "5",
+         "instructions": "These questions are about how you feel and how things have been with you during the past 4 weeks. For each question, please give the one answer that comes closest to the way you have been feeling. How much of the time during the past 4 weeks.",
+         "sectionitems": [{
+               "id":23,
+               "showid": "yes",
+               "q": "Did you feel full of pep?",
+               "a": {
+                  "atype": "scmo",
+                  "scmoanswer": [{
+                        "id":1,
+                        "text": "All the time"
+                     },
+                     {
+                        "id":2,
+                        "text": "Most of the time"
+                     },
+                     {
+                        "id":3,
+                        "text": "A good bit of the time"
+                     },
+                     {
+                        "id":4,
+                        "text": "Some of the time"
+                     },
+                     {
+                        "id":5,
+                        "text": "A little of the time"
+                     },
+                     {
+                        "id":6,
+                        "text": "None of the time"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":24,
+               "showid": "yes",
+               "q": "Have you been a very nervous person?",
+               "a": {
+                  "atype": "scmo",
+                  "scmoanswer": [{
+                        "id":1,
+                        "text": "All the time"
+                     },
+                     {
+                        "id":2,
+                        "text": "Most of the time"
+                     },
+                     {
+                        "id":3,
+                        "text": "A good bit of the time"
+                     },
+                     {
+                        "id":4,
+                        "text": "Some of the time"
+                     },
+                     {
+                        "id":5,
+                        "text": "A little of the time"
+                     },
+                     {
+                        "id":6,
+                        "text": "None of the time"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":25,
+               "showid": "yes",
+               "q": "Have you felt so down in the dumps nothing could cheer you up?",
+               "a": {
+                  "atype": "scmo",
+                  "scmoanswer": [{
+                        "id":1,
+                        "text": "All the time"
+                     },
+                     {
+                        "id":2,
+                        "text": "Most of the time"
+                     },
+                     {
+                        "id":3,
+                        "text": "A good bit of the time"
+                     },
+                     {
+                        "id":4,
+                        "text": "Some of the time"
+                     },
+                     {
+                        "id":5,
+                        "text": "A little of the time"
+                     },
+                     {
+                        "id":6,
+                        "text": "None of the time"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":26,
+               "showid": "yes",
+               "q": "Have you felt calm and peaceful?",
+               "a": {
+                  "atype": "scmo",
+                  "scmoanswer": [{
+                        "id":1,
+                        "text": "All the time"
+                     },
+                     {
+                        "id":2,
+                        "text": "Most of the time"
+                     },
+                     {
+                        "id":3,
+                        "text": "A good bit of the time"
+                     },
+                     {
+                        "id":4,
+                        "text": "Some of the time"
+                     },
+                     {
+                        "id":5,
+                        "text": "A little of the time"
+                     },
+                     {
+                        "id":6,
+                        "text": "None of the time"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":27,
+               "showid": "yes",
+               "q": "Did you have a lot of energy?",
+               "a": {
+                  "atype": "scmo",
+                  "scmoanswer": [{
+                        "id":1,
+                        "text": "All the time"
+                     },
+                     {
+                        "id":2,
+                        "text": "Most of the time"
+                     },
+                     {
+                        "id":3,
+                        "text": "A good bit of the time"
+                     },
+                     {
+                        "id":4,
+                        "text": "Some of the time"
+                     },
+                     {
+                        "id":5,
+                        "text": "A little of the time"
+                     },
+                     {
+                        "id":6,
+                        "text": "None of the time"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":28,
+               "showid": "yes",
+               "q": "Have you felt downhearted and blue?",
+               "a": {
+                  "atype": "scmo",
+                  "scmoanswer": [{
+                        "id":1,
+                        "text": "All the time"
+                     },
+                     {
+                        "id":2,
+                        "text": "Most of the time"
+                     },
+                     {
+                        "id":3,
+                        "text": "A good bit of the time"
+                     },
+                     {
+                        "id":4,
+                        "text": "Some of the time"
+                     },
+                     {
+                        "id":5,
+                        "text": "A little of the time"
+                     },
+                     {
+                        "id":6,
+                        "text": "None of the time"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":29,
+               "showid": "yes",
+               "q": "Did you feel worn out?",
+               "a": {
+                  "atype": "scmo",
+                  "scmoanswer": [{
+                        "id":1,
+                        "text": "All the time"
+                     },
+                     {
+                        "id":2,
+                        "text": "Most of the time"
+                     },
+                     {
+                        "id":3,
+                        "text": "A good bit of the time"
+                     },
+                     {
+                        "id":4,
+                        "text": "Some of the time"
+                     },
+                     {
+                        "id":5,
+                        "text": "A little of the time"
+                     },
+                     {
+                        "id":6,
+                        "text": "None of the time"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":30,
+               "showid": "yes",
+               "q": "Have you been a happy person?",
+               "a": {
+                  "atype": "scmo",
+                  "scmoanswer": [{
+                        "id":1,
+                        "text": "All the time"
+                     },
+                     {
+                        "id":2,
+                        "text": "Most of the time"
+                     },
+                     {
+                        "id":3,
+                        "text": "A good bit of the time"
+                     },
+                     {
+                        "id":4,
+                        "text": "Some of the time"
+                     },
+                     {
+                        "id":5,
+                        "text": "A little of the time"
+                     },
+                     {
+                        "id":6,
+                        "text": "None of the time"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":31,
+               "showid": "yes",
+               "q": "Did you feel tired?",
+               "a": {
+                  "atype": "scmo",
+                  "scmoanswer": [{
+                        "id":1,
+                        "text": "All the time"
+                     },
+                     {
+                        "id":2,
+                        "text": "Most of the time"
+                     },
+                     {
+                        "id":3,
+                        "text": "A good bit of the time"
+                     },
+                     {
+                        "id":4,
+                        "text": "Some of the time"
+                     },
+                     {
+                        "id":5,
+                        "text": "A little of the time"
+                     },
+                     {
+                        "id":6,
+                        "text": "None of the time"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":32,
+               "showid": "yes",
+               "q": "During the past 4 weeks, how much of the time has your physical health or emotional problems interfered with your social activities (like visiting friends, relatives, etc.)?",
+               "a": {
+                  "atype": "scmo",
+                  "scmoanswer": [{
+                        "id":1,
+                        "text": "All the time"
+                     },
+                     {
+                        "id":2,
+                        "text": "Most of the time"
+                     },
+                     {
+                        "id":3,
+                        "text": "A good bit of the time"
+                     },
+                     {
+                        "id":4,
+                        "text": "Some of the time"
+                     },
+                     {
+                        "id":5,
+                        "text": "A little of the time"
+                     },
+                     {
+                        "id":6,
+                        "text": "None of the time"
+                     }
+                  ]
+               }
+            }
+         ]
+      },
+      {
+         "name": "6",
+         "instructions": "How TRUE or FALSE is each of the following statements for you?",
+         "sectionitems": [{
+               "id":33,
+               "showid": "yes",
+               "q": "I seem to get sick a little easier than other people",
+               "a": {
+                  "atype": "scmo",
+                  "scmoanswer": [{
+                        "id":1,
+                        "text": "Definitely true"
+                     },
+                     {
+                        "id":2,
+                        "text": "Mostly true"
+                     },
+                     {
+                        "id":3,
+                        "text": "Don't know"
+                     },
+                     {
+                        "id":4,
+                        "text": "Mostly false"
+                     },
+                     {
+                        "id":5,
+                        "text": "Definitely false"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":34,
+               "showid": "yes",
+               "q": "I am as healthy as anybody I know",
+               "a": {
+                  "atype": "scmo",
+                  "scmoanswer": [{
+                        "id":1,
+                        "text": "Definitely true"
+                     },
+                     {
+                        "id":2,
+                        "text": "Mostly true"
+                     },
+                     {
+                        "id":3,
+                        "text": "Don't know"
+                     },
+                     {
+                        "id":4,
+                        "text": "Mostly false"
+                     },
+                     {
+                        "id":5,
+                        "text": "Definitely false"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":35,
+               "showid": "yes",
+               "q": "I expect my health to get worse",
+               "a": {
+                  "atype": "scmo",
+                  "scmoanswer": [{
+                        "id":1,
+                        "text": "Definitely true"
+                     },
+                     {
+                        "id":2,
+                        "text": "Mostly true"
+                     },
+                     {
+                        "id":3,
+                        "text": "Don't know"
+                     },
+                     {
+                        "id":4,
+                        "text": "Mostly false"
+                     },
+                     {
+                        "id":5,
+                        "text": "Definitely false"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":36,
+               "showid": "yes",
+               "q": "My health is excellent",
+               "a": {
+                  "atype": "scmo",
+                  "scmoanswer": [{
+                        "id":1,
+                        "text": "Definitely true"
+                     },
+                     {
+                        "id":2,
+                        "text": "Mostly true"
+                     },
+                     {
+                        "id":3,
+                        "text": "Don't know"
+                     },
+                     {
+                        "id":4,
+                        "text": "Mostly false"
+                     },
+                     {
+                        "id":5,
+                        "text": "Definitely false"
+                     }
+                  ]
+               }
+            }
+         ]
+      }
+   ]
+}

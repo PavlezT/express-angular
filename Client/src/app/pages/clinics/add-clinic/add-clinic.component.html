@@ -1,0 +1,166 @@
+<div class="button-container">
+  <button
+    nbButton
+    shape="rectangle"
+    status="success"
+    class="btn-demo"
+    (click)="back()"
+  >
+    Back
+  </button>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <nb-card>
+      <nb-card-header>Add Clinic</nb-card-header>
+      <nb-card-body>
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label"
+              >Clinic name
+                <span class="required-text">*</span>
+              </label
+            >
+            <div class="col-sm-9">
+              <input
+                type="text"
+                required
+                class="form-control"
+                placeholder="Clinic name"
+                [(ngModel)]="clinic.name"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label"
+              >Country
+                <span class="required-text">*</span>
+              </label
+            >
+            <div class="col-sm-9">
+              <input
+                type="text"
+                required
+                class="form-control"
+                [(ngModel)]="clinic.country"
+                placeholder="Country"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label"
+              >City
+                <span class="required-text">*</span>
+              </label
+            >
+            <div class="col-sm-9">
+              <input
+                type="text"
+                required
+                class="form-control"
+                [(ngModel)]="clinic.city"
+                placeholder="City"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label"
+              >
+              Street
+              <span class="required-text">*</span>
+              </label
+            >
+            <div class="col-sm-9">
+              <input
+                type="text"
+                required
+                class="form-control"
+                [(ngModel)]="clinic.street"
+                placeholder="Street"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">
+              Assosiated territory
+              <span class="required-text">*</span>
+            </label>
+            <div class="col-sm-9">
+              <select
+                type="text"
+                class="form-control custom-select"
+                placeholder="Street"
+                required
+                ngModel
+                (ngModelChange)="territoryChange($event)"
+              >
+                <option [ngValue]="territory" *ngFor="let territory of territories$ | async">{{ territory.name }}</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">
+              Profile
+              <span class="required-text">*</span>
+            </label>
+            <div class="col-sm-9">
+              <select type="text" required class="form-control custom-select" [(ngModel)]="clinic.profile">
+                <option [value]="findObjectKeyByValue(profileOption)" *ngFor="let profileOption of profileOptions">{{ profileOption }}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label"
+              >GPS Coordinates</label
+            >
+            <div class="col-sm-9 offset-sm-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  [ngModel]="clinic.latitude"
+                  (ngModelChange)="onLatitudeChanged($event)"
+                  placeholder="Latitude"
+                  disabled
+                />
+            </div>
+            <div class="col-sm-9" style="margin-bottom: 15px">
+              <input
+                type="text"
+                class="form-control"
+                [ngModel]="clinic.longitude"
+                (ngModelChange)="onLongitudeChanged($event)"
+                placeholder="Longitude"
+                disabled
+              />
+            </div>
+          </div>
+          <!-- <div class="form-group row" *ngIf="addState === loadinggState.success">
+            <div class="col-sm-12">
+              <div class="alert alert-success" role="alert">
+                <span>Clinic successfully added!</span>
+              </div>
+            </div>
+          </div> -->
+          <div class="form-group row">
+            <div class="col-sm-2">
+              <button
+                type="submit"
+                class="btn btn-success"
+                (click)="addClinic()"
+                [disabled]="isButtonDisabled"
+              >
+                Create
+              </button>
+            </div>
+          </div>
+      </nb-card-body>
+    </nb-card>
+    <nb-card class="map">
+      <nb-card-header>Add Clinic Position</nb-card-header>
+      <nb-card-body>
+        <div leaflet [leafletOptions]="options" [leafletLayers]="layers"></div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>

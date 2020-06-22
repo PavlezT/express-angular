@@ -1,0 +1,369 @@
+{
+   "name":"Oswestry",
+   "label":"Back",
+   "locale": "us-us",
+   "desc":"",
+   "instructions":"This questionnaire has been designed to give us information as to how your back or leg pain is affecting your ability to manage in everyday life.",
+   "sections":[
+      {
+         "name":"",
+         "instructions":"",
+         "sectionitems":[
+            {
+               "id":1,
+               "showid":"yes",
+               "q":"Section 1: Pain Intensity",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"I have no pain at the moment"
+                     },
+                     {
+                        "id":2,
+                        "text":"The pain is very mild at the moment"
+                     },
+                     {
+                        "id":3,
+                        "text":"The pain is moderate at the moment"
+                     },
+                     {
+                        "id":4,
+                        "text":"The pain is fairly severe at the moment"
+                     },
+                     {
+                        "id":5,
+                        "text":"The pain is very severe at the moment"
+                     },
+                     {
+                        "id":6,
+                        "text":"The pain is the worst imaginable at the moment"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":2,
+               "showid":"yes",
+               "q":"Section 2: Personal Care (eg. washing, dressing)",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"I can look after myself normally without causing extra pain"
+                     },
+                     {
+                        "id":2,
+                        "text":"I can look after myself normally but it causes extra pain"
+                     },
+                     {
+                        "id":3,
+                        "text":"It is painful to look after myself and I am slow and careful"
+                     },
+                     {
+                        "id":4,
+                        "text":"I need some help but can manage most of my personal care"
+                     },
+                     {
+                        "id":5,
+                        "text":"I need help every day in most aspects of self-care"
+                     },
+                     {
+                        "id":6,
+                        "text":"I do not get dressed, wash with difficulty and stay in bed"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":3,
+               "showid":"yes",
+               "q":"Section 3: Lifting",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"I can lift heavy weights without extra pain"
+                     },
+                     {
+                        "id":2,
+                        "text":"I can lift heavy weights but it gives me extra pain"
+                     },
+                     {
+                        "id":3,
+                        "text":"Pain prevents me from lifting heavy weights off the floor but I can manage if they are conveniently positioned, for example on a table"
+                     },
+                     {
+                        "id":4,
+                        "text":"Pain prevents me from lifting heavy weights but I can manage light to medium weights if they are conveniently positioned"
+                     },
+                     {
+                        "id":5,
+                        "text":"I can only lift very light weights"
+                     },
+                     {
+                        "id":6,
+                        "text":"I cannot lift or carry anything"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":4,
+               "showid":"yes",
+               "q":"Section 4: Walking",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"Pain does not prevent me walking any distance"
+                     },
+                     {
+                        "id":2,
+                        "text":"Pain prevents me from walking more than 2 kilometers"
+                     },
+                     {
+                        "id":3,
+                        "text":"Pain prevents me from walking more than 1 kilometer"
+                     },
+                     {
+                        "id":4,
+                        "text":"Pain prevents me from walking more than 500 meters"
+                     },
+                     {
+                        "id":5,
+                        "text":"I can only walk using a stick or crutches"
+                     },
+                     {
+                        "id":6,
+                        "text":"I am in bed most of the time"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":5,
+               "showid":"yes",
+               "q":"Section 5: Sitting",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"I can sit in any chair as long as I like"
+                     },
+                     {
+                        "id":2,
+                        "text":"I can only sit in my favorite chair as long as I like"
+                     },
+                     {
+                        "id":3,
+                        "text":"Pain prevents me sitting more than one hour"
+                     },
+                     {
+                        "id":4,
+                        "text":"Pain prevents me from sitting more than 30 minutes"
+                     },
+                     {
+                        "id":5,
+                        "text":"Pain prevents me from sitting more than 10 minutes"
+                     },
+                     {
+                        "id":6,
+                        "text":"Pain prevents me from sitting at all"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":6,
+               "showid":"yes",
+               "q":"Section 6: Standing",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"I can stand as long as I want without extra pain"
+                     },
+                     {
+                        "id":2,
+                        "text":"I can stand as long as I want but it gives me extra pain"
+                     },
+                     {
+                        "id":3,
+                        "text":"Pain prevents me from standing for more than 1 hour"
+                     },
+                     {
+                        "id":4,
+                        "text":"Pain prevents me from standing for more than 30 minutes"
+                     },
+                     {
+                        "id":5,
+                        "text":"Pain prevents me from standing for more than 10 minutes"
+                     },
+                     {
+                        "id":6,
+                        "text":"Pain prevents me from standing at all"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":7,
+               "showid":"yes",
+               "q":"Section 7: Sleeping",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"My sleep is never disturbed by pain"
+                     },
+                     {
+                        "id":2,
+                        "text":"My sleep is occasionally disturbed by pain"
+                     },
+                     {
+                        "id":3,
+                        "text":"Because of pain I have less than 6 hours sleep"
+                     },
+                     {
+                        "id":4,
+                        "text":"Because of pain I have less than 4 hours sleep"
+                     },
+                     {
+                        "id":5,
+                        "text":"Because of pain I have less than 2 hours sleep"
+                     },
+                     {
+                        "id":6,
+                        "text":"Pain prevents me from sleeping at all"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":8,
+               "showid":"yes",
+               "q":"Section 8: Sex Life (if applicable)",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"My sex life is normal and causes no extra pain"
+                     },
+                     {
+                        "id":2,
+                        "text":"My sex life is normal but causes some extra pain"
+                     },
+                     {
+                        "id":3,
+                        "text":"My sex life is nearly normal but is very painful"
+                     },
+                     {
+                        "id":4,
+                        "text":"My sex life is severely restricted by pain"
+                     },
+                     {
+                        "id":5,
+                        "text":"My sex life is nearly absent because of pain"
+                     },
+                     {
+                        "id":6,
+                        "text":"Pain prevents any sex life at all"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":9,
+               "showid":"yes",
+               "q":"Section 9: Social Life",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"My social life is normal and gives me no extra pain"
+                     },
+                     {
+                        "id":2,
+                        "text":"My social life is normal but increases the degree of pain"
+                     },
+                     {
+                        "id":3,
+                        "text":"Pain has no significant effect on my social life apart from limiting my more energetic interests such as dancing"
+                     },
+                     {
+                        "id":4,
+                        "text":"Pain has restricted my social life and I do not go out as often"
+                     },
+                     {
+                        "id":5,
+                        "text":"Pain has restricted my social life to my home"
+                     },
+                     {
+                        "id":6,
+                        "text":"I have no social life because of pain"
+                     }
+                  ]
+               }
+            },
+            {
+               "id":10,
+               "showid":"yes",
+               "q":"Section 10: Travelling",
+               "a":{
+                  "atype":"scmo",
+                  "scmoanswer":[
+                     {
+                        "id":1,
+                        "text":"I can travel anywhere without pain"
+                     },
+                     {
+                        "id":2,
+                        "text":"I can travel anywhere but it gives me extra pain"
+                     },
+                     {
+                        "id":3,
+                        "text":"Pain is bad but I manage journeys over two hours"
+                     },
+                     {
+                        "id":4,
+                        "text":"Pain restricts me to journeys of less than one hour"
+                     },
+                     {
+                        "id":5,
+                        "text":"Pain restricts me to short necessary journeys under 30 minutes"
+                     },
+                     {
+                        "id":6,
+                        "text":"Pain prevents me from travelling except to receive treatment"
+                     }
+                  ]
+               }
+            }
+         ]
+      },
+      {
+         "name":"",
+         "instructions":"",
+         "sectionitems":[
+            {
+               "id":11,
+               "showid":"no",
+               "q":"Please mark on the scale below the level of pain that you have experienced during the past month.",
+               "a":{
+                  "atype":"vas"
+               }
+            }
+         ]
+      }
+   ]
+}
